@@ -1,0 +1,44 @@
+@import './../../../assets/fonts/font.scss';
+
+
+* {
+    background-color: $colorBlack !important;
+}
+
+section {
+    width: 100%;
+    max-width: 1920px;
+    color: $colorCream;
+    display: flex;
+    justify-content: space-between;
+
+    >div:first-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        >span {
+            font-size: 22px;
+            font-weight: 400;
+        }
+    }
+
+    >div:nth-child(2) {
+        display: flex;
+        align-items: flex-end;
+        gap: 42px;
+    }
+}
+
+.legal-notice-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 15px;
+    padding-bottom: 13px;
+
+    >a {
+        padding: 5px 10px;
+        text-decoration: none;
+        color: $colorCream;
+    }
+}

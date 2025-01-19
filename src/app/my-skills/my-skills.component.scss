@@ -1,0 +1,84 @@
+@import './../../assets/fonts/font.scss';
+
+h1 {
+    font-size: 78px;
+    font-weight: 800;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    color: $colorBlack;
+    top: -55px;
+
+    &:hover {
+        color: $colorDarkGreen;
+    }
+}
+
+section {
+    height: 687px;
+    max-width: 1240px;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.icon-container {
+    height: 633px;
+    max-width: 1240px;
+    width: 100%;
+    border: 4px solid $colorBlack;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.learning-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+    gap: 10px;
+
+    >span {
+        font-size: 22px;
+        font-weight: 400;
+        color: $colorBlack;
+
+        >a {
+            text-decoration: none;
+            color: $colorDarkGreen;
+            font-size: 22px;
+            font-weight: 400;
+            padding: 5px 10px;
+            gap: 3px;
+
+            &:hover {
+                font-weight: bold;
+                animation: underline 1s ease-out;
+            }
+        }
+    }
+}
+
+.icon-wrapper {
+    display: grid;
+    grid-template-areas: 
+    "skill skill skill skill skill"
+    "skill skill skill skill skill";
+    max-width: 1240px;
+    width: 100%;
+    row-gap: 78px;
+    padding-top: 60px;
+}
+
+.arrow-position-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@keyframes underline {
+
+    from {}
+
+    to {}
+}

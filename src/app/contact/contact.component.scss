@@ -1,0 +1,56 @@
+@import './../../assets/fonts/font.scss';
+
+* {
+    background-color: $colorBlack;
+    color: $colorCream;
+}
+
+section {
+    color: $colorCream;
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        >form {
+            width: 617px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    }
+
+}
+
+h1 {
+    font-size: 78px;
+    font-weight: 800;
+    gap: 10px;
+    padding-bottom: 58px;
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: $colorDarkGreen;
+    text-align: center;
+}
+
+p {
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 18px;
+    padding-bottom: 22px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}

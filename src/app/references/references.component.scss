@@ -1,0 +1,34 @@
+@import './../../assets/fonts/font.scss';
+
+section {
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 78px;
+    font-weight: 800;
+}
+
+p {
+    padding-top: 51px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.card-wrapper {
+    display: grid;
+    grid-template-areas:
+        'card card card';
+    column-gap: 24px;
+    padding-top: 40px;
+}
+
+.arrow-position-container {
+    display: flex;
+    justify-content: flex-end;
+}

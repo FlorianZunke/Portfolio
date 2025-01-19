@@ -1,0 +1,84 @@
+@import './../../assets/fonts/font.scss';
+
+
+h1 {
+    font-size: 78px;
+    font-weight: 800;
+
+    &:hover {
+        color: $colorDarkGreen;
+    }
+}
+
+span {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+button {
+    height: 68px;
+    width: 213px;
+    gap: 10px;
+    border: 4px solid $colorBlack;
+    font-size: 23px;
+    font-weight: 400;
+
+    &:hover {
+        font-weight: bold;
+        cursor: pointer;
+        width: 253px;
+    }
+}
+
+section {
+    width: 100%;
+    max-width: 1259px;
+    height: 681px;
+    display: flex;
+}
+
+.foto-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.about-me-container {
+    max-width: 619px;
+    width: 100%;
+    height: 426px;
+    gap: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal ;
+}
+
+.arrow-position-container {
+    width: 100%;
+    max-width: 1259px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-position-container {
+    display: flex;
+    justify-content: center;
+}
+
+.work-location-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+}
+
+.info-about-me {
+    max-width: 610px;
+    width: 100%;
+}

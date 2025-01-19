@@ -1,0 +1,112 @@
+@import './../../assets/fonts/font.scss';
+
+h1 {
+    color: $colorBlack;
+    font-size: 128px;
+    font-weight: 800;
+}
+
+h2 {
+    color: $colorDarkGreen;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+a {
+    font-size: 22px;
+    font-weight: 300;
+    text-decoration: none;
+    transform: rotate(270deg);
+    color: $colorBlack;
+    position: relative;
+    left: -85px;
+    cursor: pointer;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    max-width: 100%;
+    background-color: $colorCream;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .hero {
+        // height: 561px;
+        width: 100%;
+        max-width: 1240px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+
+        >div:first-child {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        >div:nth-child(2) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+}
+
+.mid-part {
+    max-width: 1019px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+
+    >img {
+        max-width: 673px;
+        min-width: 250px;
+        width: 100%;
+    }
+}
+
+.bottom-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    gap: 6px;
+    height: 230px;
+    max-width: 116px;
+    width: 100%;
+
+    >div {
+
+        >img {
+            animation: arrowAnimation 2s ease-in-out infinite;
+        }
+    }
+    
+
+    >span {
+        font-size: 22px;
+        font-weight: 300;
+        z-index: 1;
+    }
+}
+
+@keyframes arrowAnimation {
+    100% {
+        height: 0;
+        transform: translateY(-250px);
+    }
+
+    to {
+        height: 100%;
+
+        transform: translateY(200%);
+    }
+}

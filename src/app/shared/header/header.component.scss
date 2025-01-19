@@ -1,0 +1,16 @@
+section {
+    position: sticky;
+    top: 0;
+    height: 64px;
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.logo {
+    height: 30px;
+    width: 50px;
+}
