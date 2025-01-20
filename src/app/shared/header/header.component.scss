@@ -1,16 +1,26 @@
+@import './../../../assets/fonts/font.scss';
+
 section {
     position: sticky;
     top: 0;
-    height: 64px;
+    height: 92px;
     width: 100%;
     max-width: 1920px;
     display: flex;
     justify-content: space-between;
+    background-color: $colorCream;
     align-items: center;
     z-index: 2;
+
+    >img {
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .logo {
-    height: 30px;
-    width: 50px;
+    height: 94px;
+    width: 104px;
 }

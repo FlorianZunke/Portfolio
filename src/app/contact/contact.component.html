@@ -1,37 +1,37 @@
 <section class="padding">
-    <h1 class="font-syne">Say Hi!</h1>
-    <div>
-        <h2>Want to discuss a new project?</h2>
-        <p>Say hello! let's discuss your ideas and make it happen</p>
-        <form #contactform="ngForm">
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                placeholder="Your name" required>
-            @if (!name.valid && name.touched && !name.disabled) {
-            <span>Please enter a message</span>
-            }
-
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            @if (!email.valid && email.touched && !email.disabled) {
-            <span>Please enter a message</span>
-            }
-
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-                placeholder="Your message" required></textarea>
-            @if (!message.valid && message.touched && !message.disabled) {
-            <span>Please enter a message</span>
-            }
-            <div>
-                <img src="" alt="Checkbox">
-                <span>I've read the <a>privacy police</a>and agree the processing of my data as outlined.</span>
-            </div>
-
-            <button (click)="onSubmit(contactform)">Send message</button>
-        </form>
-    </div>
-
-    <div class="image-container">
-        <img src="assets/icons/arrow-up.png" alt="">
-    </div>
+        <h1 class="font-syne">Say Hi!</h1>
+        <div>
+            <h2>Want to discuss a new project?</h2>
+            <p>Say hello! let's discuss your ideas and make it happen</p>
+            <form #contactform="ngForm">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                    placeholder="Your name" required>
+                @if (!name.valid && name.touched && !name.disabled) {
+                <span>Please enter a message</span>
+                }
+    
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                    placeholder="Your email" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                @if (!email.valid && email.touched && !email.disabled) {
+                <span>Please enter a message</span>
+                }
+    
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                    placeholder="Your message" required></textarea>
+                @if (!message.valid && message.touched && !message.disabled) {
+                <span>Please enter a message</span>
+                }
+                <div>
+                    <img src="" alt="Checkbox">
+                    <span>I've read the <a>privacy police</a>and agree the processing of my data as outlined.</span>
+                </div>
+    
+                <button (click)="onSubmit(contactform)">Send message</button>
+            </form>
+        </div>
+    
+        <div class="image-container">
+            <img src="assets/icons/arrow-up.png" alt="">
+        </div>
 </section>
 <app-footer></app-footer>

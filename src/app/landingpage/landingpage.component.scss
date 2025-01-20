@@ -34,9 +34,9 @@ section {
     align-items: center;
 
     .hero {
-        // height: 561px;
+        height: 561px;
         width: 100%;
-        max-width: 1240px;
+        max-width: 1920px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -50,6 +50,7 @@ section {
 
         >div:nth-child(2) {
             width: 100%;
+            max-width: 1920px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -84,7 +85,6 @@ section {
     width: 100%;
 
     >div {
-
         >img {
             animation: arrowAnimation 2s ease-in-out infinite;
         }
@@ -94,7 +94,8 @@ section {
     >span {
         font-size: 22px;
         font-weight: 300;
-        z-index: 1;
+        z-index: 2;
+        background-color: $colorCream;
     }
 }
 
@@ -106,7 +107,6 @@ section {
 
     to {
         height: 100%;
-
         transform: translateY(200%);
     }
 }

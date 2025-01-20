@@ -1,18 +1,28 @@
 @import './../../assets/fonts/font.scss';
 
 * {
-    background-color: $colorBlack;
+
     color: $colorCream;
 }
 
 section {
     color: $colorCream;
+    background-image: url('../../assets/img/Rectangle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 776px; 
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     >div {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
         >form {
             width: 617px;
             display: flex;
@@ -22,7 +32,6 @@ section {
             gap: 20px;
         }
     }
-
 }
 
 h1 {

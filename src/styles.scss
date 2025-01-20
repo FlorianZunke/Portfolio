@@ -3,13 +3,14 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    background-color: $colorCream;
+
     scroll-behavior: smooth;
 }
 
 body {
     max-width: 1920px;
     width: 100%;
+    background-color: $colorCream;
 }
 
 .padding {
