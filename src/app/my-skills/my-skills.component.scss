@@ -7,10 +7,11 @@ h1 {
     padding-right: 10px;
     position: relative;
     color: $colorBlack;
+    background-color: $colorCream;
     top: -55px;
 
     &:hover {
-        color: $colorDarkGreen;
+        color: $colorGreen;
     }
 }
 
@@ -45,16 +46,8 @@ section {
         color: $colorBlack;
 
         >a {
-            text-decoration: none;
-            color: $colorDarkGreen;
-            font-size: 22px;
-            font-weight: 400;
-            padding: 5px 10px;
-            gap: 3px;
-
             &:hover {
                 font-weight: bold;
-                animation: underline 1s ease-out;
             }
         }
     }
@@ -62,9 +55,9 @@ section {
 
 .icon-wrapper {
     display: grid;
-    grid-template-areas: 
-    "skill skill skill skill skill"
-    "skill skill skill skill skill";
+    grid-template-areas:
+        "skill skill skill skill skill"
+        "skill skill skill skill skill";
     max-width: 1240px;
     width: 100%;
     row-gap: 78px;
@@ -76,9 +69,30 @@ section {
     justify-content: flex-start;
 }
 
-@keyframes underline {
+.custom-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: $colorGreen;
+    font-size: 22px;
+    font-weight: 400;
+    padding: 5px 10px;
+    gap: 3px;
+}
 
-    from {}
+.custom-link::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    width: 40%;
+    height: 3px;
+    background-color: $colorGreen;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.1s ease;
+}
 
-    to {}
+.custom-link:hover::after {
+    transform: scaleX(1);
 }

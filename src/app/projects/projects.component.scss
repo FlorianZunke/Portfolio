@@ -1,9 +1,26 @@
 @import './../../assets/fonts/font.scss';
+@import '../../styles.scss';
 
 h1 {
     font-size: 78px;
     font-weight: 800;
     color: $colorBlack;
+    padding-bottom: 35px;
+
+    &:hover {
+        color: $colorGreen;
+    }
+}
+
+h2 {
+    font-size: 45px;
+    font-weight: 800;
+}
+
+h3 {
+    font-size: 23px;
+    font-weight: 400;
+    color: $colorGreen;
 }
 
 p {
@@ -12,11 +29,60 @@ p {
     text-align: center;
 }
 
+span {
+    font-size: 48px;
+    font-weight: 700;
+    text-align: left;
+}
+
 section {
-    height: 2333px;
+    height: auto;
     max-width: 1920px;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+}
+
+.project {
+    height: 460px;
+    max-width: 1920px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.project-hover-position {
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.project-hover {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 85px;
+    gap: 15px;
+
+    >p {
+        text-align: left;
+    }
+}
+
+.span-position {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 84px;
 }

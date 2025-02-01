@@ -18,6 +18,16 @@ section {
             cursor: pointer;
         }
     }
+
+    >div {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .logo {

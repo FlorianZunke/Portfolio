@@ -1,8 +1,23 @@
 <section class="padding">
     <h1 class="font-syne">Portfolio</h1>
-    <p class="font-overpass">Explore a selection of my work here - interact with <br> projects to see my skills in action.</p>
-    <app-singleproject></app-singleproject>
-    <app-singleproject></app-singleproject>
-    <app-singleproject></app-singleproject>
-    <app-singleproject></app-singleproject>
+    <p class="font-overpass">Explore a selection of my work here - interact with <br> projects to see my skills in
+        action.</p>
+    <main>
+        @for (project of projects.projects; track project; let index = $index) {
+            <section class="project">
+                <img src="{{ project.imgSrc }}" alt="">
+                <div class="project-hover-position">
+                    <div class="span-position">
+                        <span class="font-syne">{{ index + 1 }}/{{ projects.projects.length }}</span>
+                    </div>
+                    <div class="project-hover">
+                        <h2 class="font-syne">{{ project.projectName }}</h2>
+                        <h3 class="font-overpass">{{ project.skills }}</h3>
+                        <p class="font-overpass">{{ project.description }}</p>
+                        <a target="_blank" href="https://github.com/FlorianZunke"><button>Github</button></a>
+                    </div>
+                </div>
+            </section>
+            }
+    </main>
 </section>

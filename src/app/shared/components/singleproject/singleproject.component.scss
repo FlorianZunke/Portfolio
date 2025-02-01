@@ -1,6 +1,4 @@
-$colorCream: rgb(255, 252, 243);
-$colorDarkGreen: rgb(77, 126, 103);
-$colorBlack: rgb(0, 0, 0);
+@import '../../../../assets/fonts/font.scss';
 
 
 section {
@@ -22,7 +20,6 @@ section {
         justify-content: flex-end;
         align-items: flex-start;
     }
-
 }
 
 h1 {

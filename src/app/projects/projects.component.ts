@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { SingleprojectComponent } from "../shared/components/singleproject/singleproject.component";
+import { ProjectService } from '../services/project.service';
 
 @Component({
   selector: 'app-projects',
@@ -10,4 +11,5 @@ import { SingleprojectComponent } from "../shared/components/singleproject/singl
 })
 export class ProjectsComponent {
 
+  projects = inject(ProjectService)
 }
