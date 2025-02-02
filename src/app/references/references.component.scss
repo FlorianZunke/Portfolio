@@ -11,6 +11,10 @@ section {
 h1 {
     font-size: 78px;
     font-weight: 800;
+
+    &:hover {
+        color: $colorGreen;
+    }
 }
 
 p {

@@ -28,6 +28,10 @@ section {
 
     &:hover {
         border: 4px solid $colorGreen;
+
+        .quote {
+            background-image: url('../../../../assets/icons/format_quote_green.png');
+        }
     }
 
     >div {
@@ -35,10 +39,11 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
-        >img {
-            height: 44px;
-            width: 44px;
-        }
     }
+}
+
+.quote {
+    background-image: url('../../../../assets/icons/format_quote.png');
+    height: 44px;
+    width: 44px;
 }

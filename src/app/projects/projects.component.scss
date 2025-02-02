@@ -45,6 +45,7 @@ section {
 }
 
 main {
+
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -58,7 +59,32 @@ main {
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 32px;
+    gap: 64px;
+
+    &:hover {
+
+        >div {
+            >.border-hover {
+                border: 4px solid $colorBlack;
+                bottom: -20px;
+                left: 20px;
+            }
+        }
+
+        .project-hover {
+            animation: slideText 0.35s ease-in-out;
+            opacity: 1;
+        }
+
+        img {
+            opacity: 1;
+            mix-blend-mode: unset;
+        }
+
+        .hover-Arrow {
+            animation: rotateArrow 0.25s ease-in-out;
+        }
+    }
 }
 
 .project-hover-position {
@@ -73,7 +99,9 @@ main {
     display: flex;
     flex-direction: column;
     padding-bottom: 85px;
+    padding-left: 35px;
     gap: 15px;
+    opacity: 0;
 
     >p {
         text-align: left;
@@ -85,4 +113,47 @@ main {
     justify-content: flex-end;
     align-items: flex-start;
     height: 84px;
+}
+
+.border-hover {
+    position: absolute;
+    height: 393px;
+    width: 100%;
+
+    >img {
+        position: absolute;
+        top: 175px;
+        right: -39px;
+        opacity: 0;
+    }
+}
+
+.position-relative {
+    position: relative;
+
+    >img {
+        mix-blend-mode: luminosity;
+    }
+}
+
+@keyframes rotateArrow {
+    0% {
+        scale: 0.5;
+        rotate: 130deg;
+    }
+
+    100% {
+        scale: 1;
+        rotate: 0deg;
+    }
+}
+
+@keyframes slideText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }

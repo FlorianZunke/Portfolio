@@ -5,7 +5,12 @@
     <main>
         @for (project of projects.projects; track project; let index = $index) {
             <section class="project">
-                <img src="{{ project.imgSrc }}" alt="">
+                <div class="position-relative">
+                    <div class="border-hover">
+                        <img class="hover-Arrow" src="assets/icons/hover_arrow.png" alt="">
+                    </div>
+                    <img  src="{{ project.imgSrc }}" alt="">
+                </div>
                 <div class="project-hover-position">
                     <div class="span-position">
                         <span class="font-syne">{{ index + 1 }}/{{ projects.projects.length }}</span>

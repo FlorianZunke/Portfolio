@@ -1,7 +1,6 @@
 @import './../../assets/fonts/font.scss';
 
 * {
-
     color: $colorCream;
 }
 
@@ -54,6 +53,33 @@ p {
     text-align: center;
     padding-top: 18px;
     padding-bottom: 22px;
+}
+
+a {
+    text-decoration: none;
+    color: $colorGreen;
+}
+
+input {
+    max-width: 617px;
+    width: 100%;
+    height: 50px;
+    padding: 15px 25px;
+    border: none;
+    border-bottom: 2px solid $colorCream;
+    background-color: $colorBlack;
+    color: $colorCream;
+}
+
+textarea {
+    max-width: 617px;
+    width: 100%;
+    height: 202px;
+    padding: 15px 25px;
+    border: none;
+    border-bottom: 2px solid $colorCream;
+    background-color: $colorBlack;
+    color: $colorCream;
 }
 
 .image-container {
