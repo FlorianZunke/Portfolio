@@ -1,20 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { LandingpageComponent } from "./landingpage/landingpage.component";
-import { AboutMeComponent } from "./about-me/about-me.component";
-import { MySkillsComponent } from "./my-skills/my-skills.component";
-import { ProjectsComponent } from "./projects/projects.component";
-import { ContactComponent } from "./contact/contact.component";
-import { ReferencesComponent } from "./references/references.component";
+import { OverlayService } from './services/overlay.service';
+import { OverlayComponent } from './shared/components/drop-menu/drop-menu.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet, LandingpageComponent, AboutMeComponent, MySkillsComponent, ProjectsComponent, ContactComponent, ReferencesComponent],
+  imports: [CommonModule, RouterOutlet, OverlayComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  overlay = inject(OverlayService);
   title = 'Portfolio';
 }

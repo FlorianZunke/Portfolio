@@ -13,17 +13,6 @@ section {
     z-index: 2;
 
     >img {
-
-        &:hover {
-            cursor: pointer;
-        }
-    }
-
-    >div {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-
         &:hover {
             cursor: pointer;
         }
@@ -33,4 +22,31 @@ section {
 .logo {
     height: 94px;
     width: 104px;
+}
+
+.menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+
+    span {
+        
+        width: 40px;
+        height: 4px;
+        background-color: $colorBlack;
+        transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+    }
+
+    &.open span:nth-child(1) {
+        transform: translateY(15px) rotate(45deg);
+    }
+
+    &.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+        transform: translateY(-15px) rotate(-45deg);
+    }
 }

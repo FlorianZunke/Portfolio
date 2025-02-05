@@ -22,7 +22,7 @@ export class ReferenceCardComponent {
     },
     {
       name: 'M.Marrocu',
-      position: 'Frontend Developer',
+      position: 'Frontend Entwickler',
       zitat: 'Florian ist äußerst kreativ und findet immer Lösungsvorschläge, die das Team voranbringen. Seine Hilfsbereitschaft zeichnet ihn aus – er unterstützt andere jederzeit mit Rat und Tat. Durch sein starkes Engagement sorgt er dafür, dass Projekte erfolgreich umgesetzt werden.'
     },
   ]

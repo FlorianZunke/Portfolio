@@ -6,6 +6,7 @@
 }
 
 section {
+    height: 69px;
     width: 100%;
     max-width: 1920px;
     color: $colorCream;
@@ -16,6 +17,14 @@ section {
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+
+        >a {
+            cursor: default;
+
+            &:hover {
+                cursor: default;
+            }
+        }
 
         >span {
             font-size: 22px;
@@ -35,15 +44,70 @@ section {
     justify-content: flex-end;
     padding-top: 15px;
     padding-bottom: 13px;
+}
 
-    >a {
-        padding: 5px 10px;
-        text-decoration: none;
-        color: $colorCream;
+a {
+    text-decoration: none;
+    color: $colorCream;
+    
+    &:hover {
+        cursor: pointer;
+
+        .link_img{
+            cursor: pointer;
+            animation: scaleUp 0.25s forwards;
+            transform: translateY(-25px);
+        }
     }
 }
 
+.custom-link {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: $colorCream;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 5px 10px;
+    gap: 3px;
+
+    &:hover {
+        font-weight: bold;
+        font-size: 18px;
+        transform: translateX(15px);
+    }
+}
+
+.custom-link::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    bottom: 0px;
+    width: 50%;
+    height: 3px;
+    background-color: $colorGreen;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.1s ease;
+}
+
+.custom-link:hover::after {
+    transform: scaleX(1);
+
+}
+
 .logo {
-    height: 94px;
-    width: 104px;
+    cursor: pointer;
+    height: 65px;
+    width: 75px;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: translateY(0px);
+    }
+
+    100% {
+        transform: translateY(-15px);
+    }
 }

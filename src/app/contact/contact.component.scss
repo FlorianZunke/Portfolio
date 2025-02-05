@@ -9,12 +9,13 @@ section {
     background-image: url('../../assets/img/Rectangle.png');
     background-repeat: no-repeat;
     background-size: cover;
-    height: 776px; 
+    height: 900px;
     width: 100%;
     max-width: 1920px;
+    padding-bottom: 36px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
 
     >div {
         display: flex;
@@ -26,9 +27,32 @@ section {
             width: 617px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
             gap: 20px;
+            padding-bottom: 16px;
+        }
+    }
+}
+
+.privacyPolice {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    margin-bottom: 12px;
+
+    >span {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &:hover {
+
+        a {
+            font-weight: bold;
+        }
+
+        .checkbox-field {
+            background-color: $colorGreen;
+            border-radius: 10px;
         }
     }
 }
@@ -58,6 +82,9 @@ p {
 a {
     text-decoration: none;
     color: $colorGreen;
+    padding: 5px 7px;
+    font-size: 14px;
+    font-weight: 400;
 }
 
 input {
@@ -69,6 +96,10 @@ input {
     border-bottom: 2px solid $colorCream;
     background-color: $colorBlack;
     color: $colorCream;
+
+    &:hover {
+        border: 3px solid $colorCream;
+    }
 }
 
 textarea {
@@ -80,12 +111,58 @@ textarea {
     border-bottom: 2px solid $colorCream;
     background-color: $colorBlack;
     color: $colorCream;
+    resize: none;
+
+    &:hover {
+        border: 3px solid $colorCream;
+    }
 }
 
-.image-container {
+.arrow-container {
+    position: relative;
     width: 100%;
+    height: 77px;
     max-width: 1920px;
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
+
+
+    >a {
+        transform-origin: bottom;
+        transition: 125ms ease-out;
+        cursor: pointer;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+
+        &:hover {
+            cursor: pointer;
+            transform: scaleY(1.3);
+        }
+    }
+}
+
+button {
+    background-color: $colorBlack;
+    border: 4px solid #BBBBBB;
+    box-shadow: 5px 5px 15px 0px #00000026;
+    opacity: 50%;
+    gap: 10px;
+    cursor: pointer;
+    width: 253px;
+    font-weight: 400;
+}
+
+.checkbox-field {
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.error-text {
+    color: $colorError;
 }

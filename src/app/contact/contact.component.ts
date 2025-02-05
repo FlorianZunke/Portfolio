@@ -1,5 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { FooterComponent } from "../shared/footer/footer.component";
 import { HttpClient } from '@angular/common/http';
 
@@ -49,6 +49,31 @@ export class ContactComponent {
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
 
       ngForm.resetForm();
+    }
+  }
+
+
+  getNamePlaceholder(name: NgModel): string {
+    if (!name.valid && name.touched) {
+      return  'Please enter our Name';
+    } else {
+      return 'our name'
+    }
+  }
+
+  getEmailPlaceholder(name: NgModel): string {
+    if (!name.valid && name.touched) {
+      return 'Please enter a valid Email';
+    } else {
+      return 'YourEmail@mail.de'
+    }
+  }
+
+  getTextboxPlaceholder(name: NgModel): string {
+    if (!name.valid && name.touched) {
+      return 'Please enter our message';
+    } else {
+      return 'our message'
     }
   }
 
