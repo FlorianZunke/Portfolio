@@ -166,3 +166,84 @@ button {
 .error-text {
     color: $colorError;
 }
+
+
+@media screen and (min-width: 540px) and (max-width: 900px) {
+    h1 {
+        font-size: 56px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .arrow-container {
+        display: none;
+    }
+
+    section {
+        >div {
+            >form {
+                width: 500px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-bottom: 16px;
+            }
+        }
+    }
+
+    input {
+        max-width: 500px;
+        width: 100%;
+        height: 50px;
+        padding: 15px 25px;
+    }
+
+    textarea {
+        max-width: 500px;
+        width: 100%;
+        height: 202px;
+        padding: 15px 25px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 540px) {
+    h1 {
+        font-size: 45px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    section {
+        >div {
+            >form {
+                width: 250px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-bottom: 16px;
+            }
+        }
+    }
+
+    .arrow-container {
+        display: none;
+    }
+
+    input {
+        max-width: 617px;
+        width: 100%;
+        height: 50px;
+        padding: 15px 25px;
+    }
+
+    textarea {
+        max-width: 617px;
+        width: 100%;
+        height: 202px;
+        padding: 15px 25px;
+    }
+}

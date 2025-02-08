@@ -45,7 +45,6 @@ section {
 }
 
 main {
-
     display: flex;
     flex-direction: column;
     gap: 70px;
@@ -61,8 +60,14 @@ main {
     flex-direction: row;
     gap: 64px;
 
-    &:hover {
+    .span-position {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: 84px;
+    }
 
+    &:hover {
         >div {
             >.border-hover {
                 border: 4px solid $colorBlack;
@@ -85,6 +90,49 @@ main {
             animation: rotateArrow 0.25s ease-in-out;
         }
     }
+
+    &.reverse {
+        flex-direction: row-reverse;
+
+        .span-position {
+            justify-content: flex-start;
+        }
+
+        >div {
+            >.border-hover {
+                left: auto;
+                right: 20px;
+
+                >img {
+                    left: -39px;
+                }
+            }
+        }
+
+        &:hover {
+            >div {
+                >.border-hover {
+                    right: 20px;
+                    left: auto;
+
+                    >img {
+                        left: -39px;
+                    }
+                }
+            }
+
+            .project-hover {
+                animation: slideTextReverse 0.35s ease-in-out;
+                opacity: 1;
+            }
+
+            .hover-Arrow {
+                animation: rotateArrowReverse 0.25s ease-in-out;
+                scale: 1;
+                rotate: 270deg;
+            }
+        }
+    }
 }
 
 .project-hover-position {
@@ -102,17 +150,12 @@ main {
     padding-left: 35px;
     gap: 15px;
     opacity: 0;
+    max-width: 620px;
+    width: 100%;
 
     >p {
         text-align: left;
     }
-}
-
-.span-position {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-start;
-    height: 84px;
 }
 
 .border-hover {
@@ -136,6 +179,7 @@ main {
     }
 }
 
+// Animationen
 @keyframes rotateArrow {
     0% {
         scale: 0.5;
@@ -148,12 +192,449 @@ main {
     }
 }
 
+@keyframes rotateArrowReverse {
+    0% {
+        scale: 0.5;
+        rotate: 90deg;
+    }
+
+    100% {
+        scale: 1;
+        rotate: 270deg;
+    }
+}
+
+@keyframes rotateArrowMobile {
+    0% {
+        scale: 0.5;
+        rotate: 0deg;
+    }
+
+    100% {
+        scale: 1;
+        rotate: 137deg;
+    }
+}
+
 @keyframes slideText {
     0% {
         opacity: 0;
+        transform: translateX(-100px);
     }
 
     100% {
         opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTextReverse {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideTextMobile {
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+// Media Queries
+@media screen and (min-width: 730px) and (max-width: 1250px) {
+    .project {
+        height: auto;
+        flex-direction: column;
+
+        >div {
+            >.border-hover {
+                left: 20px;
+
+                >img {
+                    top: 347px;
+                    right: 250px;
+                }
+            }
+        }
+
+        &:hover {
+            .hover-Arrow {
+                animation: rotateArrowMobile 0.25s ease-in-out;
+                scale: 1;
+                rotate: 137deg;
+            }
+
+            .project-hover {
+                animation: slideTextMobile 0.35s ease-in-out;
+                opacity: 1;
+            }
+        }
+
+        &.reverse {
+            flex-direction: column;
+
+            .span-position {
+                justify-content: flex-end;
+            }
+
+            >div {
+                >.border-hover {
+                    left: 20px;
+
+                    >img {
+                        top: 347px;
+                        left: 250px;
+                    }
+                }
+            }
+
+            &:hover {
+                .hover-Arrow {
+                    animation: rotateArrowMobile 0.25s ease-in-out;
+                    scale: 1;
+                    rotate: 137deg;
+                }
+
+                .project-hover {
+                    animation: slideTextMobile 0.35s ease-in-out;
+                    opacity: 1;
+                }
+
+                >div {
+                    >.border-hover {
+                        left: 20px;
+
+                        >img {
+                            top: 347px;
+                            left: 250px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 730px) {
+
+    .border-hover {
+        height: 225px;
+
+        >img {
+            top: 175px;
+            right: -39px;
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    .position-relative {
+        >img {
+            height: 225px;
+            width: 300px;
+        }
+    }
+
+    .project-hover {
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .project-hover-position {
+        height: auto;
+        gap: 0;
+    }
+
+    .project {
+        height: auto;
+        flex-direction: column;
+
+        .span-position {
+            height: auto;
+        }
+
+        >div {
+            >.border-hover {
+                left: 20px;
+
+                >img {
+                    top: 193px;
+                    right: 112px;
+                }
+            }
+        }
+
+        &:hover {
+            .hover-Arrow {
+                animation: rotateArrowMobile 0.25s ease-in-out;
+                scale: 1;
+                rotate: 137deg;
+            }
+
+            .project-hover {
+                animation: slideTextMobile 0.35s ease-in-out;
+                opacity: 1;
+            }
+        }
+
+        &.reverse {
+            flex-direction: column;
+
+            .span-position {
+                justify-content: flex-end;
+            }
+
+            >div {
+                >.border-hover {
+                    left: 20px;
+
+                    >img {
+                        top: 193px;
+                        left: 112px;
+                    }
+                }
+            }
+
+            &:hover {
+                .hover-Arrow {
+                    animation: rotateArrowMobile 0.25s ease-in-out;
+                    scale: 1;
+                    rotate: 137deg;
+                }
+
+                .project-hover {
+                    animation: slideTextMobile 0.35s ease-in-out;
+                    opacity: 1;
+                }
+
+                >div {
+                    >.border-hover {
+                        left: 20px;
+
+                        >img {
+                            top: 193px;
+                            left: 112px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    main {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    span {
+        font-size: 40px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 500px) {
+    h1 {
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
+
+    section {
+        padding-bottom: 32px;
+    }
+
+    span {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .project-hover {
+        padding-bottom: 0;
+        padding-left: 0;
+    }
+
+    .project-hover-position {
+        height: auto;
+        gap: 0;
+    }
+
+    .border-hover {
+        height: 125px;
+
+        >img {
+            top: 175px;
+            right: -39px;
+            height: 37px;
+            width: 37px;
+        }
+    }
+
+    .position-relative {
+        >img {
+            height: 125px;
+            width: 240px;
+        }
+    }
+
+    .project {
+        height: auto;
+        flex-direction: column;
+
+        .span-position {
+            height: auto;
+        }
+
+        >div {
+            >.border-hover {
+                left: 20px;
+
+                >img {
+                    top: 101px;
+                    right: 95px;
+                }
+            }
+        }
+
+        &:hover {
+            .hover-Arrow {
+                animation: rotateArrowMobile 0.25s ease-in-out;
+                scale: 1;
+                rotate: 137deg;
+            }
+
+            .project-hover {
+                animation: slideTextMobile 0.35s ease-in-out;
+                opacity: 1;
+            }
+        }
+
+        &.reverse {
+            flex-direction: column;
+
+            .span-position {
+                justify-content: flex-end;
+            }
+
+            >div {
+                >.border-hover {
+                    left: 20px;
+
+                    >img {
+                        top: 101px;
+                        left: 95px;
+                    }
+                }
+            }
+
+            &:hover {
+                .hover-Arrow {
+                    animation: rotateArrowMobile 0.25s ease-in-out;
+                    scale: 1;
+                    rotate: 137deg;
+                }
+
+                .project-hover {
+                    animation: slideTextMobile 0.35s ease-in-out;
+                    opacity: 1;
+                }
+
+                >div {
+                    >.border-hover {
+                        left: 20px;
+
+                        >img {
+                            top: 101px;
+                            left: 95px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    main {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+}
+
+@media (hover: none) {
+    .project {
+        .border-hover {
+            border: 4px solid $colorBlack;
+            bottom: -20px;
+            left: 20px;
+
+            >img {
+                top: 347px;
+                right: 250px;
+                rotate: 137deg;
+            }
+        }
+
+        .project-hover {
+            animation: none;
+            opacity: 1;
+        }
+
+        img {
+            opacity: 1;
+            mix-blend-mode: unset;
+        }
+
+        .hover-Arrow {
+            animation: none;
+        }
+    }
+
+    .position-relative {
+        >img {
+            mix-blend-mode: unset;
+        }
     }
 }

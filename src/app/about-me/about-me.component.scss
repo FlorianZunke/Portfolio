@@ -4,6 +4,7 @@
 h1 {
     font-size: 78px;
     font-weight: 800;
+    padding-bottom: 48px;
 
     &:hover {
         color: $colorGreen;
@@ -25,7 +26,13 @@ section {
     max-width: 1920px;
     height: 681px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    >div {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+    }
 }
 
 .foto-container {
@@ -42,6 +49,8 @@ section {
 
     >.border-hover {
         position: absolute;
+        bottom: -20px;
+        left: 20px;
         height: 533px;
         width: 533px;
     }
@@ -62,7 +71,8 @@ section {
     gap: 48px;
     display: flex;
     flex-direction: column;
-    align-items: normal ;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .arrow-position-container {
@@ -73,6 +83,7 @@ section {
 }
 
 .button-position-container {
+    width: 100%;
     display: flex;
     justify-content: center;
 }
@@ -93,4 +104,162 @@ section {
 .info-about-me {
     max-width: 610px;
     width: 100%;
+}
+
+@media screen and (min-width: 900px) and (max-width: 1285px) {
+    .foto-container {
+        >img {
+            height: 400px;
+            width: 400px;
+        }
+
+        >.border-hover {
+            height: 400px;
+            width: 400px;
+        }
+    }
+
+    span {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 710px) and (max-width: 900px) {
+    section {
+        height: auto;
+        align-items: center;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
+
+    .foto-container {
+        >img {
+            height: 400px;
+            width: 400px;
+        }
+
+        >.border-hover {
+            height: 400px;
+            width: 400px;
+        }
+
+        &:hover {
+            >.border-hover {
+                bottom: -20px;
+                left: 125px;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 48px;
+        padding-bottom: 0;
+    }
+
+    span {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 500px) and (max-width: 710px) {
+
+    section {
+        height: auto;
+        align-items: center;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
+
+    .foto-container {
+        >img {
+            height: 350px;
+            width: 350px;
+        }
+
+        >.border-hover {
+            height: 350px;
+            width: 350px;
+        }
+
+        &:hover {
+            >.border-hover {
+                left: 20px;
+            }
+        }
+    }
+
+    .info-about-me {
+        max-width: 355px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 500px) {
+    .foto-container {
+        >img {
+            height: 250px;
+            width: 250px;
+        }
+
+        >.border-hover {
+            height: 250px;
+            width: 250px;
+        }
+
+        &:hover {
+            >.border-hover {
+                border: 4px solid $colorBlack;
+                bottom: -20px;
+                left: 20px;
+            }
+        }
+    }
+
+    section {
+        height: auto;
+        align-items: center;
+
+        >div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 16px;
+        }
+    }
+
+    h1 {
+        font-size: 32px;
+        padding-bottom: 16px;
+    }
+
+    span {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .info-about-me {
+        max-width: 255px;
+        width: 100%;
+    }
 }

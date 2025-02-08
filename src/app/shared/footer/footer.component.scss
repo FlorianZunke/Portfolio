@@ -5,6 +5,11 @@
     background-color: $colorBlack !important;
 }
 
+span {
+    font-size: 22px;
+    font-weight: 400;
+}
+
 section {
     height: 69px;
     width: 100%;
@@ -25,11 +30,6 @@ section {
                 cursor: default;
             }
         }
-
-        >span {
-            font-size: 22px;
-            font-weight: 400;
-        }
     }
 
     >div:nth-child(2) {
@@ -49,11 +49,11 @@ section {
 a {
     text-decoration: none;
     color: $colorCream;
-    
+
     &:hover {
         cursor: pointer;
 
-        .link_img{
+        .link_img {
             cursor: pointer;
             animation: scaleUp 0.25s forwards;
             transform: translateY(-25px);
@@ -109,5 +109,70 @@ a {
 
     100% {
         transform: translateY(-15px);
+    }
+}
+
+@media screen and (min-width: 540px) and (max-width: 900px) {
+    p {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    span {
+        font-size: 19px;
+        font-weight: 300;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 540px) {
+    p {
+        font-size: 20px;
+    }
+
+    a {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    span {
+        font-size: 19px;
+        font-weight: 300;
+    }
+
+    section {
+        height: auto;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+
+        >div:first-child {
+            >a {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        >div:nth-child(2) {
+            display: flex;
+            align-items: flex-end;
+            gap: 42px;
+        }
+    }
+
+    .legal-notice-container {
+        justify-content: center;
+    }
+
+    .custom-link {
+        &:hover {
+            font-weight: 500;
+            font-size: 18px;
+        }
     }
 }

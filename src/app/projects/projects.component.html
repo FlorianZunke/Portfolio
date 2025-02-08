@@ -4,7 +4,7 @@
         action.</p>
     <main>
         @for (project of projects.projects; track project; let index = $index) {
-            <section class="project">
+            <section [ngClass]="{ 'reverse': index % 2 !== 0 }" style="width: 100%;" class="project padding">
                 <div class="position-relative">
                     <div class="border-hover">
                         <img class="hover-Arrow" src="assets/icons/hover_arrow.png" alt="">

@@ -32,3 +32,38 @@ button {
         width: 253px;
     }
 }
+
+
+//Tablet
+@media screen and (min-width: 450px) and (max-width: 1285px){
+
+    .padding {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    button {
+        height: 68px;
+        width: 213px;
+        font-size: 20px;
+    }
+}
+
+
+//Smartphone
+@media screen and (min-width: 280px) and (max-width: 450px){
+    .padding {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    button {
+        height: 48px;
+        width: 150px;
+        font-size: 18px;
+
+        &:hover {
+            width: 185px;
+        }
+    }
+}

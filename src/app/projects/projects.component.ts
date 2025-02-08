@@ -1,11 +1,11 @@
 import { Component, inject } from '@angular/core';
-import { SingleprojectComponent } from "../shared/components/singleproject/singleproject.component";
 import { ProjectService } from '../services/project.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-projects',
   standalone: true,
-  imports: [SingleprojectComponent],
+  imports: [CommonModule],
   templateUrl: './projects.component.html',
   styleUrl: './projects.component.scss'
 })

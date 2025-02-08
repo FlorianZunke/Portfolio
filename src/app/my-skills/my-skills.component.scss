@@ -16,15 +16,16 @@ h1 {
 }
 
 section {
-    height: 687px;
+    height: auto;
     max-width: 1920px;
     width: 100%;
     display: flex;
     align-items: flex-end;
+    padding-top: 48px;
 }
 
 .icon-container {
-    height: 633px;
+    height: auto;
     max-width: 1920px;
     width: 100%;
     border: 4px solid $colorBlack;
@@ -38,6 +39,7 @@ section {
     justify-content: center;
     align-items: center;
     padding-top: 48px;
+    padding-bottom: 48px;
     gap: 10px;
 
     >span {
@@ -53,15 +55,24 @@ section {
     }
 }
 
+.skill-icon {
+    grid-area: si;
+}
+
+.skill-text {
+    grid-area: st;
+}
+
 .icon-wrapper {
     display: grid;
     grid-template-areas:
-        "skill skill skill skill skill"
-        "skill skill skill skill skill";
+        "si"
+        "st";
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: minmax(100px, auto);
     max-width: 1240px;
     width: 100%;
-    row-gap: 78px;
-    padding-top: 60px;
+    gap: 78px;
 }
 
 .arrow-position-container {
@@ -95,4 +106,141 @@ section {
 
 .custom-link:hover::after {
     transform: scaleX(1);
+}
+
+.single-skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    &:hover {
+        color: $colorGreen;
+
+        >img {
+            animation: skillHover 225ms linear;
+            animation-iteration-count: 1;
+        }
+    }
+
+    >span {
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+
+@keyframes skillHover {
+
+    0% {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+
+    25% {
+        transform: scale(0.66) translateX(66px) translateY(-10px);
+    }
+
+    50% {
+        transform: scale(0.25) translateX(0) translateY(-30px);
+    }
+
+    75% {
+        transform: scale(0.66) translateX(-66px) translateY(-10px);
+    }
+
+    100% {
+        transform: scale(1) translateX(0) translateY(0);
+    }
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 900px) {
+    .icon-wrapper {
+        grid-template-areas:
+            "si si si"
+            "st st st";
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: minmax(50px, auto);
+        gap: 50px;
+    }
+
+    .single-skill:nth-last-child(1) {
+        grid-column: 2 / 3;
+    }
+
+    h1 {
+        font-size: 48px;
+        top: -33px;
+    }
+
+    .single-skill {
+        >img {
+            height: 60px;
+            width: 55px;
+            object-fit: contain;
+        }
+    }
+
+    .learning-container {
+        padding-left: 15px;
+        padding-right: 15px;
+        >img {
+            height: 60px;
+            width: 55px;
+            object-fit: contain;
+        }
+    
+        >span {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 500px) {
+    .icon-wrapper {
+        grid-template-areas:
+            "si si"
+            "st st";
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(15px, auto);
+        gap: 15px;
+    }
+
+    .single-skill:nth-last-child(1) {
+        grid-column: 2 / 3;
+    }
+
+    h1 {
+        font-size: 32px;
+        top: -22px;
+    }
+
+    .single-skill {
+        >img {
+            height: 50px;
+            width: 45px;
+            object-fit: contain;
+        }
+
+        >span {
+            text-align: center;
+        }
+    }
+
+    .learning-container {
+        padding-left: 5px;
+        padding-right: 5px;
+        >img {
+            height: 50px;
+            width: 45px;
+            object-fit: contain;
+        }
+    
+        >span {
+            font-size: 16px;
+
+            >a {
+                font-size: 18px;
+            }
+        }
+    }
 }

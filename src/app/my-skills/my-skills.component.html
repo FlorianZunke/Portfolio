@@ -1,8 +1,14 @@
-
 <section class="padding">
     <div class="icon-container">
         <h1 class="font-syne">My skills</h1>
-        <app-icons class="icon-wrapper"></app-icons>
+        <div class="icon-wrapper">
+            @for (skill of skills; track skill) {
+                <div class="single-skill ">
+                    <img class="skill-icon" src="{{ skill.imgSrc }}" alt="">
+                    <span class="skill-text" class="font-overpass">{{ skill.skillName }}</span>
+                </div>
+            }
+        </div>
         <div class="learning-container">
             <img src="assets/icons/Continued_learning.png" alt="">
             <span class="font-overpass"> Don't see the skill you need? <a class="custom-link" href="#contact">Contact me</a> I'm always ready to learn!</span>
