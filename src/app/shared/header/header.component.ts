@@ -14,7 +14,7 @@ export class HeaderComponent {
 
   isOpen:boolean = false;
 
-  constructor(private overlayService: OverlayService) {}
+  constructor(public overlayService: OverlayService) {}
 
   toggleOverlay() {
     this.isOpen = !this.isOpen;

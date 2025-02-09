@@ -2,7 +2,7 @@
 @import '../../styles.scss';
 
 h1 {
-    font-size: 78px;
+    font-size: clamp(1.75rem, 0.0087rem + 9.9502vw, 8rem);
     font-weight: 800;
     color: $colorBlack;
     padding-bottom: 35px;
@@ -13,24 +13,24 @@ h1 {
 }
 
 h2 {
-    font-size: 45px;
+    font-size: clamp(2rem, 1.7736rem + 1.2935vw, 2.8125rem);
     font-weight: 800;
 }
 
 h3 {
-    font-size: 23px;
+    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
     font-weight: 400;
     color: $colorGreen;
 }
 
 p {
-    font-size: 22px;
+    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
     font-weight: 400;
     text-align: center;
 }
 
 span {
-    font-size: 48px;
+    font-size: clamp(2rem, 1.7214rem + 1.592vw, 3rem);
     font-weight: 700;
     text-align: left;
 }
@@ -439,58 +439,16 @@ main {
         }
     }
 
-    span {
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
     main {
         padding-top: 50px;
         padding-bottom: 50px;
     }
 }
 
-@media screen and (min-width: 500px) and (max-width: 900px) {
-    h1 {
-        font-size: 48px;
-    }
-
-    span {
-        font-size: 40px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-}
-
 @media screen and (min-width: 280px) and (max-width: 500px) {
-    h1 {
-        font-size: 32px;
-        padding-bottom: 16px;
-    }
 
     section {
         padding-bottom: 32px;
-    }
-
-    span {
-        font-size: 23px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    h3 {
-        font-size: 20px;
     }
 
     .project-hover {

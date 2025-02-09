@@ -1,14 +1,14 @@
 @import './../../assets/fonts/font.scss';
 
 h1 {
-    font-size: 78px;
+    font-size: clamp(1.75rem, 0.0087rem + 9.9502vw, 8rem);
     font-weight: 800;
     padding-left: 10px;
     padding-right: 10px;
     position: relative;
     color: $colorBlack;
     background-color: $colorCream;
-    top: -55px;
+    top: calc(-0.7 * 1em);
 
     &:hover {
         color: $colorGreen;
@@ -34,6 +34,21 @@ section {
     align-items: center;
 }
 
+span {
+    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
+    font-weight: 400;
+    color: $colorBlack;
+    text-align: center;
+}
+
+a {
+    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
+
+    &:hover {
+        font-weight: bold;
+    }
+}
+
 .learning-container {
     display: flex;
     justify-content: center;
@@ -41,22 +56,17 @@ section {
     padding-top: 48px;
     padding-bottom: 48px;
     gap: 10px;
-
-    >span {
-        font-size: 22px;
-        font-weight: 400;
-        color: $colorBlack;
-
-        >a {
-            &:hover {
-                font-weight: bold;
-            }
-        }
-    }
 }
 
 .skill-icon {
     grid-area: si;
+    max-height: 68px;
+    min-height: 45px;
+    height: 100%;
+    max-width: 68px;
+    min-width: 45px;
+    width: 100%;
+    object-fit: contain;
 }
 
 .skill-text {
@@ -85,7 +95,7 @@ section {
     display: inline-block;
     text-decoration: none;
     color: $colorGreen;
-    font-size: 22px;
+    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
     font-weight: 400;
     padding: 5px 10px;
     gap: 3px;
@@ -118,14 +128,16 @@ section {
         color: $colorGreen;
 
         >img {
+            min-height: 50px;
+            max-height: 68px;
+            height: 100%;
+            max-width: 68px;
+            min-width: 45px;
+            width: 100%;
+            object-fit: contain;
             animation: skillHover 225ms linear;
             animation-iteration-count: 1;
         }
-    }
-
-    >span {
-        font-size: 16px;
-        font-weight: 700;
     }
 }
 
@@ -167,31 +179,9 @@ section {
         grid-column: 2 / 3;
     }
 
-    h1 {
-        font-size: 48px;
-        top: -33px;
-    }
-
-    .single-skill {
-        >img {
-            height: 60px;
-            width: 55px;
-            object-fit: contain;
-        }
-    }
-
     .learning-container {
         padding-left: 15px;
         padding-right: 15px;
-        >img {
-            height: 60px;
-            width: 55px;
-            object-fit: contain;
-        }
-    
-        >span {
-            font-size: 20px;
-        }
     }
 }
 
@@ -209,38 +199,8 @@ section {
         grid-column: 2 / 3;
     }
 
-    h1 {
-        font-size: 32px;
-        top: -22px;
-    }
-
-    .single-skill {
-        >img {
-            height: 50px;
-            width: 45px;
-            object-fit: contain;
-        }
-
-        >span {
-            text-align: center;
-        }
-    }
-
     .learning-container {
         padding-left: 5px;
         padding-right: 5px;
-        >img {
-            height: 50px;
-            width: 45px;
-            object-fit: contain;
-        }
-    
-        >span {
-            font-size: 16px;
-
-            >a {
-                font-size: 18px;
-            }
-        }
     }
 }

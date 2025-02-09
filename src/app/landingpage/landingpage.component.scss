@@ -2,7 +2,7 @@
 
 h1 {
     color: $colorBlack;
-    font-size: 128px;
+    font-size: clamp(1.75rem, 0.0087rem + 9.9502vw, 8rem);
     font-weight: 800;
     width: 100%;
     max-width: 1920px;
@@ -11,12 +11,13 @@ h1 {
 
 h2 {
     color: $colorGreen;
-    font-size: 48px;
+    font-size: clamp(1rem, 0.4428rem + 3.1841vw, 3rem);
     font-weight: 700;
+    white-space: nowrap;
 }
 
 a {
-    font-size: 22px;
+    font-size: clamp(1.125rem, 0.9792rem + 0.8333vw, 1.375rem);
     font-weight: 300;
     text-decoration: none;
     transform: rotate(270deg);
@@ -63,20 +64,18 @@ section {
     }
 }
 
+.cutLine {
+    border: 2px solid $colorBlack;
+    width: 100%;
+}
+
 .mid-part {
     max-width: 1019px;
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 32px;
-
-    >span {
-        border: 2px solid $colorBlack;
-        max-width: 675px;
-        min-width: 250px;
-        width: 100%;
-    }
 }
 
 .bottom-part {
@@ -98,7 +97,7 @@ section {
 
     >span {
         width: 100%;
-        font-size: 22px;
+        font-size: clamp(1.125rem, 0.9792rem + 0.8333vw, 1.375rem);
         font-weight: 300;
         z-index: 1;
         background-color: $colorCream;
@@ -118,72 +117,13 @@ section {
     }
 }
 
-
-//Tablet
-@media screen and (min-width: 760px) and (max-width: 1285px) {
-    h1 {
-        font-size: 80px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .mid-part {
-        >span {
-            max-width: 425px;
-        }
-    }
-
-}
-
-
-//Smartphone
-@media screen and (min-width: 450px) and (max-width: 760px) {
-    h1 {
-        font-size: 45px;
-    }
-
-    h2 {
-        font-size: 23px;
-    }
-
-    .mid-part {
-        >span {
-            max-width: 180px;
-            min-width: 100px;
-        }
-    }
-}
-
-
 @media screen and (min-width: 280px) and (max-width: 450px) {
-    h1 {
-        font-size: 28px;
-    }
-
-    h2 {
-        font-size: 16px;
-    }
-
-    .mid-part {
-        >span {
-            max-width: 100px;
-            min-width: 80px;
-        }
-    }
-
     a {
-        font-size: 18px;
-        left: -78px;
+        left: -75px;
     }
 
     .bottom-part {
         max-width: 80px;
         width: 100%;
-
-        >span {
-            font-size: 18px;
-        }
     }
 }

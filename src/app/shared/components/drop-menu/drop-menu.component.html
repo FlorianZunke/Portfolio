@@ -1,14 +1,7 @@
-<div *ngIf="overlayService.overlayVisible$ | async" class="overlay">
-        <!-- <header class="padding">
-                <a href="#"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
-                <div>
-                        <img src="assets/img/Vector_1.svg" alt="">
-                        <img src="assets/img/Vector_1.svg" alt="">
-                        <img src="assets/img/Vector_1.svg" alt="">
-                </div>
-        </header> -->
-        <app-header></app-header>
 
+<div *ngIf="overlayService.overlayVisible$ | async" class="overlay">
+        <app-header></app-header>
+        
         <nav class="dropMenu">
                 <div>
                         <div class="border-hover"></div>
@@ -22,20 +15,20 @@
                         <div class="border-hover"></div>
                         <a class="font-syne" href="#projects">Portfolio</a>
                 </div>
-        </nav>
 
-        <footer class="padding">
-                <div>
-                        <h1 class="font-syne">Say Hi!</h1>
-                        <span class="font-overpass"> &copy;Florian Zunke 2024</span>
-                </div>
-                <div>
-                        <a target="_blank" href="https://github.com/FlorianZunke"><img class="link_img"
-                                        src="assets/icons/GitHub-Default.png" alt=""></a>
-                        <a target="_blank" href=""><img class="link_img" src="assets/icons/Email-Default.png"
-                                        alt=""></a>
-                        <a target="_blank" href="https://www.linkedin.com/feed/"><img class="link_img"
-                                        src="assets/icons/LinkedIn-Default.png" alt=""></a>
-                </div>
-        </footer>
+                <footer class="padding">
+                        <div>
+                                <h1 class="font-syne">Say Hi!</h1>
+                                <span class="font-overpass"> &copy;Florian Zunke 2024</span>
+                        </div>
+                        <div>
+                                <a target="_blank" href="https://github.com/FlorianZunke"><img class="link_img"
+                                                src="assets/icons/GitHub-Default.png" alt=""></a>
+                                <a target="_blank" href=""><img class="link_img" src="assets/icons/Email-Default.png"
+                                                alt=""></a>
+                                <a target="_blank" href="https://www.linkedin.com/feed/"><img class="link_img"
+                                                src="assets/icons/LinkedIn-Default.png" alt=""></a>
+                        </div>
+                </footer>
+        </nav>
 </div>
