@@ -18,6 +18,7 @@ export class ContactComponent {
     name: '',
     email: '',
     message: '',
+    privacy: false,
   }
 
   mailTest = true;

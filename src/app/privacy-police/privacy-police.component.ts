@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from "../shared/header/header.component";
 
 @Component({
-  selector: 'app-legal-notice',
+  selector: 'app-privacy-police',
   standalone: true,
   imports: [HeaderComponent],
-  templateUrl: './legal-notice.component.html',
-  styleUrl: './legal-notice.component.scss'
+  templateUrl: './privacy-police.component.html',
+  styleUrl: './privacy-police.component.scss'
 })
-export class LegalNoticeComponent {
+export class PrivacyPoliceComponent {
 
 }

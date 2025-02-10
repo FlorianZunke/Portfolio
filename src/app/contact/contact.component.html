@@ -22,7 +22,7 @@
                 <span class="font-overpass error-text">Please enter a message</span>
                 }
                 <div class="privacyPolice">
-                    <input class="checkbox-field" type="checkbox" required>
+                    <input [(ngModel)]="contactData.privacy"class="checkbox checkbox-field" type="checkbox" name="privacy" id="checkbox">
                     <span class="font-overpass">I've read the <a class="font-overpass" href="privacyPolice">privacy police</a> and agree the processing of my data as outlined.</span>
                 </div>
             </form>

@@ -52,7 +52,6 @@ section {
 
         .checkbox-field {
             background-color: $colorGreen;
-            border-radius: 10px;
         }
     }
 }
@@ -61,7 +60,7 @@ h1 {
     font-size: 78px;
     font-weight: 800;
     gap: 10px;
-    padding-bottom: 58px;
+    padding-bottom: 30px;
 }
 
 h2 {
@@ -155,12 +154,29 @@ button {
 
 .checkbox-field {
     margin-right: 10px;
-    height: 15px;
-    width: 15px;
+    height: 24px;
+    width: 24px;
 
     &:hover {
+        border-radius: 0;
         cursor: pointer;
     }
+}
+
+input[type="checkbox"] {
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: $colorBlack;
+    border: 2px solid $colorCream;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: $colorGreen;
 }
 
 .error-text {
