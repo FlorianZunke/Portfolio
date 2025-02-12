@@ -12,15 +12,12 @@ import { CommonModule } from '@angular/common';
 
 export class HeaderComponent {
 
-  isOpen:boolean = false;
-
   constructor(public overlayService: OverlayService) {}
 
   toggleOverlay() {
-    this.isOpen = !this.isOpen;
-    console.log('Menu Status:', this.isOpen); // Debugging
+    console.log('Menu Status:', this.overlayService.isOpen); // Debugging
     
-    if (this.isOpen) {
+    if (!this.overlayService.isOpen) {
       this.overlayService.openOverlay();
     } else {
       this.overlayService.closeOverlay();

@@ -1,6 +1,6 @@
 <section class="padding">
         <a href="#"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
-        <div class="trigger menu-icon" [ngClass]="{'open': isOpen}" (click)="toggleOverlay()">
+        <div class="trigger menu-icon" [ngClass]="{'open': overlayService.isOpen}" (click)="toggleOverlay()">
                 <span></span>
                 <span></span>
                 <span></span>
