@@ -6,6 +6,21 @@
     scroll-behavior: smooth;
 }
 
+[id]::before {
+    content: "";
+    display: block;
+    height: 120px; /* Gleicher Wert wie scroll-margin-top */
+    margin-top: -120px;
+}
+
+#about_me,
+#skills,
+#projects,
+#references,
+#contact {
+  scroll-margin-top: 120px; /* Falls 100px nicht ausreicht */
+}
+
 body {
     max-width: 1920px;
     width: 100%;
@@ -34,7 +49,7 @@ button {
 }
 
 //Tablet
-@media screen and (min-width: 450px) and (max-width: 1285px){
+@media screen and (min-width: 450px) and (max-width: 1285px) {
 
     .padding {
         padding-left: 40px;
@@ -49,7 +64,7 @@ button {
 }
 
 //Smartphone
-@media screen and (min-width: 280px) and (max-width: 450px){
+@media screen and (min-width: 280px) and (max-width: 450px) {
     .padding {
         padding-left: 16px;
         padding-right: 16px;

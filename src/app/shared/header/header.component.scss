@@ -17,6 +17,26 @@ section {
             cursor: pointer;
         }
     }
+
+    >div {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+}
+
+.translate-container {
+    display: flex;
+    gap: 10px;
+    font-size: clamp(1.125rem, 1.061rem + 0.3659vw, 1.5rem);
+
+    >span {
+        font-size: clamp(1.125rem, 1.061rem + 0.3659vw, 1.5rem);
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
 }
 
 .logo {

@@ -1,8 +1,12 @@
 <section class="padding">
         <a href="#"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
-        <div class="trigger menu-icon" [ngClass]="{'open': overlayService.isOpen}" (click)="toggleOverlay()">
-                <span></span>
-                <span></span>
-                <span></span>
+        <div>
+                <div class="translate-container"><span>DE</span>|<span>EN</span></div>
+                <div class="trigger menu-icon" [ngClass]="{'open': overlayService.isOpen}" (click)="toggleOverlay()">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </div>
         </div>
+
 </section>
