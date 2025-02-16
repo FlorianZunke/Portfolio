@@ -28,21 +28,21 @@
         "sub-headline-two": "Das sagen meine Kollegen über die Zusammenarbeit mit mir."
     },
     "contact": {
-        "headline": "Sag Hallo",
-        "head-1": "Möchtest du ein neues Projekt besprechen?",
-        "head-2": "Lass uns deine Ideen besprechen und sie verwirklichen.",
-        "text-1": "Ich habe die",
-        "text-2": "gelesen und stimme der Verarbeitung meiner Daten gemäß der Beschreibung zu.",
+        "headline": "Kontakt",
+        "head-1": "Lass uns reden!",
+        "head-2": "Fühle dich frei, mich über dieses Formular zu kontaktieren.",
+        "placeholder": {
+            "name": "Wie heißt du?",
+            "nameError": "Du hast deinen Namen vergessen!",
+            "email": "deinemail@mail.com",
+            "emailError": "Ich brauche deine E-Mail, um dir zu antworten!",
+            "message": "Was möchtest du wissen?",
+            "messageError": "Bitte gib eine Nachricht ein!"
+        },
+        "text-1": "Ich stimme der",
         "link": "Datenschutzerklärung",
+        "text-2": "zu.",
         "button": "Nachricht senden"
-    },
-    "form": {
-        "placeholder": "Wie heißt du?",
-        "placeholder-touched": "Du hast deinen Namen vergessen!",
-        "mail": "deinemail@mail.com",
-        "mail-touched": "Ich brauche deine E-Mail, um dir zu antworten!",
-        "message": "Hey Flori, ich interessiere mich für ...",
-        "message-touched": "Was möchtest du wissen?"
     },
     "footer": {
         "link": "Impressum"
@@ -57,17 +57,17 @@
             "name": "A.Albrecht",
             "position": "Team Partner",
             "comment": "Die Zusammenarbeit mit Florian war stets kommunikativ und lösungsorientiert. Ich konnte mich auf ihn verlassen und habe seine offene und freundliche Art geschätzt. Ich freue mich auf zukünftige Projekte mit ihm."
-          },
-          {
+        },
+        {
             "name": "J.Natzschka",
             "position": "Team Partner",
             "comment": "Florian hat während unserer Projektarbeit hervorragende Arbeit geleistet. Seine Fähigkeit, komplexe Logik in verlässlichen Code zu übertragen, hat unser Projekt maßgeblich vorangebracht. Des Weiteren schätze ich besonders seine Zuverlässigkeit und die angenehme Zusammenarbeit mit ihm."
-          },
-          {
+        },
+        {
             "name": "M.Marrocu",
             "position": "Frontend Entwickler",
             "comment": "Florian ist äußerst kreativ und findet immer Lösungsvorschläge, die das Team voranbringen. Seine Hilfsbereitschaft zeichnet ihn aus – er unterstützt andere jederzeit mit Rat und Tat. Durch sein starkes Engagement sorgt er dafür, dass Projekte erfolgreich umgesetzt werden."
-          }
+        }
     ],
     "projects": {
         "join": "Ein Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",

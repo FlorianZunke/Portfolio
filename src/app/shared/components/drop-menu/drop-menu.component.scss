@@ -103,12 +103,8 @@ footer {
     max-width: 1920px;
     width: 100%;
     position: absolute;
-    right: 0;
+    left: 0;
     bottom: 0;
-}
-
-.overlay.active {
-    right: 0;
 }
 
 @keyframes menuHover {

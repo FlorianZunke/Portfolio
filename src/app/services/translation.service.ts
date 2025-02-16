@@ -11,7 +11,7 @@ export class TranslationService {
   }
 
   private initLanguage() {
-    const savedLang = localStorage.getItem('language') || 'de';
+    const savedLang = localStorage.getItem('language') || 'en';
     this.translate.use(savedLang);
   }
 

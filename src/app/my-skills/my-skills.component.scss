@@ -35,7 +35,7 @@ section {
 }
 
 span {
-    font-size: clamp(1rem, 0.8955rem + 0.597vw, 1.375rem);
+    font-size: clamp(0.9375rem, 0.8628rem + 0.4268vw, 1.375rem);
     font-weight: 400;
     color: $colorBlack;
     text-align: center;
@@ -61,10 +61,8 @@ a {
 .skill-icon {
     grid-area: si;
     max-height: 68px;
-    min-height: 45px;
     height: 100%;
     max-width: 68px;
-    min-width: 45px;
     width: 100%;
     object-fit: contain;
 }
@@ -203,8 +201,24 @@ a {
         grid-column: 2 / 3;
     }
 
+    .learning-info {
+        display: flex;
+        flex-direction: column;
+    }
+
     .learning-container {
         padding-left: 5px;
         padding-right: 5px;
+
+        >img {
+            max-width: 45px;
+            max-height: 45px;
+        }
+    }
+
+    .skill-icon {
+        max-height: 45px;
+        max-width: 45px;
+
     }
 }

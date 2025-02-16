@@ -3,15 +3,19 @@
         <h1 class="font-syne">{{ 'my-skills.headline' | translate }}</h1>
         <div class="icon-wrapper">
             @for (skill of skills; track skill) {
-                <div class="single-skill ">
-                    <img class="skill-icon" src="{{ skill.imgSrc }}" alt="">
-                    <span class="skill-text" class="font-overpass">{{ skill.skillName }}</span>
-                </div>
+            <div class="single-skill ">
+                <img class="skill-icon" src="{{ skill.imgSrc }}" alt="">
+                <span class="skill-text" class="font-overpass">{{ skill.skillName }}</span>
+            </div>
             }
         </div>
         <div class="learning-container">
             <img src="assets/icons/Continued_learning.png" alt="">
-            <span class="font-overpass"> {{ 'my-skills.info-1' | translate }} </span><a class="custom-link font-overpass" href="#contact">{{ 'my-skills.button' | translate }}</a><span class="font-overpass"> {{ 'my-skills.info-2' | translate }}</span>
+            <div class="learning-info">
+                <div><span class="font-overpass"> {{ 'my-skills.info-1' | translate }} </span></div>
+                <div><a class="custom-link font-overpass" href="#contact">{{ 'my-skills.button' | translate }}</a></div>
+                <div><span class="font-overpass"> {{ 'my-skills.info-2' | translate }}</span></div>
+            </div>
         </div>
     </div>
 </section>

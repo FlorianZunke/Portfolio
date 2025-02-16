@@ -26,11 +26,9 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
-    max-width: 1920px;
-    width: 100%;
+    // align-items: center;
     background-color: $colorCream;
-    // overflow-x: hidden;
+    overflow-x: hidden;
 }
 
 .padding {
@@ -70,7 +68,7 @@ button {
 }
 
 //Smartphone
-@media screen and (min-width: 280px) and (max-width: 450px) {
+@media screen and (min-width: 280px) and (max-width: 500px) {
     .padding {
         padding-left: 16px;
         padding-right: 16px;

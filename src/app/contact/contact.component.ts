@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, computed, signal } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { FooterComponent } from "../shared/footer/footer.component";
 import { HttpClient } from '@angular/common/http';
@@ -14,7 +14,31 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ContactComponent {
 
-  constructor(private translate: TranslateService) {}
+  placeholderTexts = signal({
+    name: this.translate.instant('contact.placeholder.name'),
+    nameError: this.translate.instant('contact.placeholder.nameError'),
+    email: this.translate.instant('contact.placeholder.email'),
+    emailError: this.translate.instant('contact.placeholder.emailError'),
+    message: this.translate.instant('contact.placeholder.message'),
+    messageError: this.translate.instant('contact.placeholder.messageError'),
+  });
+
+  constructor(private translate: TranslateService) { 
+    this.translate.onLangChange.subscribe(() => {
+      this.updatePlaceholders();
+    });
+  }
+
+  private updatePlaceholders() {
+    this.placeholderTexts.set({
+      name: this.translate.instant('contact.placeholder.name'),
+      nameError: this.translate.instant('contact.placeholder.nameError'),
+      email: this.translate.instant('contact.placeholder.email'),
+      emailError: this.translate.instant('contact.placeholder.emailError'),
+      message: this.translate.instant('contact.placeholder.message'),
+      messageError: this.translate.instant('contact.placeholder.messageError'),
+    });
+  }
 
   http = inject(HttpClient)
 
@@ -57,29 +81,15 @@ export class ContactComponent {
     }
   }
 
-
   getNamePlaceholder(name: NgModel): string {
-    if (!name.valid && name.touched) {
-      return  "What's your name?";
-    } else {
-      return 'You forgot your name!'
-    }
+    return !name.valid && name.touched ? this.placeholderTexts().nameError : this.placeholderTexts().name;
   }
 
-  getEmailPlaceholder(name: NgModel): string {
-    if (!name.valid && name.touched) {
-      return 'yourmail@mail.com';
-    } else {
-      return 'I need your email to answer you!'
-    }
+  getEmailPlaceholder(email: NgModel): string {
+    return !email.valid && email.touched ? this.placeholderTexts().emailError : this.placeholderTexts().email;
   }
 
-  getTextboxPlaceholder(name: NgModel): string {
-    if (!name.valid && name.touched) {
-      return 'Hey Flori, I am intrested at ...';
-    } else {
-      return 'What do you want to know?'
-    }
+  getTextboxPlaceholder(message: NgModel): string {
+    return !message.valid && message.touched ? this.placeholderTexts().messageError : this.placeholderTexts().message;
   }
-
 }

@@ -112,7 +112,14 @@ input.ng-invalid.ng-touched::placeholder {
     line-height: 22px;
     font-weight: 400;
     color: rgba(236, 123, 123, 0.8);
-  }
+}
+
+textarea.ng-invalid.ng-touched::placeholder {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+    color: rgba(236, 123, 123, 0.8);
+}
 
 textarea {
     max-width: 617px;

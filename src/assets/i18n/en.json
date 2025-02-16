@@ -13,9 +13,9 @@
     },
     "my-skills": {
         "headline": "My skills",
-        "info-1": "Don`t see the skill you need?",
+        "info-1": "Don't see the skill you need?",
         "button": "Contact me",
-        "info-2": "I`m always ready to learn!"
+        "info-2": "I'm always ready to learn!"
     },
     "portfolio": {
         "headline": "Portfolio",
@@ -37,15 +37,15 @@
         "text-1": "I've read the",
         "text-2": "and agree the processeing of my data as outlined.",
         "link": "privacy police",
-        "button": "Send message"
-    },
-    "form": {
-        "placeholder": "What's your name?",
-        "placeholder-touched": "You forgot your name!",
-        "mail": "yourmail@mail.com",
-        "mail-touched": "I need your email to answer you!",
-        "message": "Hey Flori, I am intrested at ...",
-        "message-touched": "What do you want to know?"
+        "button": "Send message",
+        "placeholder": {
+          "name": "What's your name?",
+          "nameError": "You forgot your name!",
+          "email": "yourmail@mail.com",
+          "emailError": "I need your email to answer you!",
+          "message": "What do you want to know?",
+          "messageError": "Please enter your message!"
+        }
     },
     "footer": {
         "link": "legal notice"

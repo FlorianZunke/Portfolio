@@ -33,8 +33,6 @@ export class HeaderComponent {
   }
   
   toggleOverlay() {
-    console.log('Menu Status:', this.overlayService.isOpen); // Debugging
-    
     if (!this.overlayService.isOpen) {
       this.overlayService.openOverlay();
     } else {
