@@ -3,15 +3,15 @@
         <nav class="dropMenu">
                 <div>
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="about_me" (click)="navigateToSection('about_me')">About me</a>
+                        <a class="font-syne" [routerLink]="['/']" fragment="about_me" (click)="navigateToSection('about_me')">{{ 'drop-menu.link-1' | translate }}</a>
                 </div>
                 <div>
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="skills" (click)="navigateToSection('skills')">My skills</a>
+                        <a class="font-syne" [routerLink]="['/']" fragment="skills" (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
                 </div>
                 <div>
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="projects" (click)="navigateToSection('projects')">Portfolio</a>
+                        <a class="font-syne" [routerLink]="['/']" fragment="projects" (click)="navigateToSection('projects')">{{ 'drop-menu.link-3' | translate }}</a>
                 </div>
 
                 <footer class="padding">

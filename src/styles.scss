@@ -9,8 +9,10 @@
 [id]::before {
     content: "";
     display: block;
-    height: 120px; /* Gleicher Wert wie scroll-margin-top */
+    height: 120px;
     margin-top: -120px;
+    max-width: 1920px;
+    width: 100%;
 }
 
 #about_me,
@@ -18,13 +20,17 @@
 #projects,
 #references,
 #contact {
-  scroll-margin-top: 120px; /* Falls 100px nicht ausreicht */
+  scroll-margin-top: 120px;
 }
 
 body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 1920px;
     width: 100%;
     background-color: $colorCream;
+    // overflow-x: hidden;
 }
 
 .padding {

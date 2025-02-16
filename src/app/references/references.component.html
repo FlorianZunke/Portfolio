@@ -1,20 +1,20 @@
 <section class="padding">
-    <h1 class="font-syne">References</h1>
-    <p class="font-overpass">I thrive both independently and as part of a team. <br> Here's what my colleagues have to say about working with me.
+    <h1 class="font-syne">{{ 'references.headline' | translate }}</h1>
+    <p class="font-overpass">{{ 'references.sub-headline-one' | translate }} <br> {{ 'references.sub-headline-two' | translate }}
     </p>
     <div class="card-wrapper card">
-        @for (card of referenceDatas; track card) {
+        @for (card of referenceDatas(); track card.id) {
             <section class="single-card ">
                 <div>
                     <div class="quote"></div>
                     <h2 class="font-syne">{{ card.name }}</h2>
                     <h3 class="font-overpass">{{ card.position }}</h3>
                 </div>
-                <span class="font-overpass">{{ card.zitat }}</span>
+                <span class="font-overpass">{{ card.comment }}</span>
             </section>
         }
     </div>
 </section>
-<div class="arrow-position-container">
+<div class="arrow-position-container padding">
     <img src="assets/icons/Arrow_left.png" alt="">
 </div>

@@ -2,15 +2,19 @@ import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { FooterComponent } from "../shared/footer/footer.component";
 import { HttpClient } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [FormsModule, FooterComponent],
+  imports: [FormsModule, FooterComponent, CommonModule, TranslateModule],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
 })
 export class ContactComponent {
+
+  constructor(private translate: TranslateService) {}
 
   http = inject(HttpClient)
 
@@ -56,25 +60,25 @@ export class ContactComponent {
 
   getNamePlaceholder(name: NgModel): string {
     if (!name.valid && name.touched) {
-      return  'Please enter our Name';
+      return  "What's your name?";
     } else {
-      return 'our name'
+      return 'You forgot your name!'
     }
   }
 
   getEmailPlaceholder(name: NgModel): string {
     if (!name.valid && name.touched) {
-      return 'Please enter a valid Email';
+      return 'yourmail@mail.com';
     } else {
-      return 'YourEmail@mail.de'
+      return 'I need your email to answer you!'
     }
   }
 
   getTextboxPlaceholder(name: NgModel): string {
     if (!name.valid && name.touched) {
-      return 'Please enter our message';
+      return 'Hey Flori, I am intrested at ...';
     } else {
-      return 'our message'
+      return 'What do you want to know?'
     }
   }
 

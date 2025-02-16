@@ -52,6 +52,12 @@ main {
     padding-bottom: 118px;
 }
 
+.img-size {
+    width: 620px;
+    height: 393px;
+    object-fit: cover;
+}
+
 .project {
     height: 460px;
     max-width: 1920px;
@@ -558,41 +564,5 @@ main {
     main {
         padding-top: 25px;
         padding-bottom: 25px;
-    }
-}
-
-@media (hover: none) {
-    .project {
-        .border-hover {
-            border: 4px solid $colorBlack;
-            bottom: -20px;
-            left: 20px;
-
-            >img {
-                top: 347px;
-                right: 250px;
-                rotate: 137deg;
-            }
-        }
-
-        .project-hover {
-            animation: none;
-            opacity: 1;
-        }
-
-        img {
-            opacity: 1;
-            mix-blend-mode: unset;
-        }
-
-        .hover-Arrow {
-            animation: none;
-        }
-    }
-
-    .position-relative {
-        >img {
-            mix-blend-mode: unset;
-        }
     }
 }

@@ -1,26 +1,22 @@
 <section class="padding">
-    <h1 class="font-syne">About me</h1>
+    <h1 class="font-syne">{{ 'about-me.headline' | translate }}</h1>
     <div>
         <div class="about-me-container">
             <p class="info-about-me font-overpass">
-                I am a Front-end deverloper from Treuenbrietzen, Germany. I help designers and companies to bring their ideas to
-                real life. Creativity and logical thinking are skills that I have developed to connect ideas into
-                quality products.
-
-                If you think I’d be a good match for your projects, contact me!
+                {{ 'about-me.about-me-text' | translate }}
             </p>
             <div class="work-location-info">
                 <div>
                     <img src="assets/icons/house.png" alt="">
-                    <span class="font-overpass">Based in Treuenbrietzen</span>
+                    <span class="font-overpass">{{ 'about-me.based' | translate }}</span>
                 </div>
                 <div>
                     <img src="assets/icons/laptop.png" alt="">
-                    <span class="font-overpass">Open to work Remote</span>
+                    <span class="font-overpass">{{ 'about-me.remote' | translate }}</span>
                 </div>
             </div>
             <div class="button-position-container">
-                <a href="#contact"><button class="font-overpass">Let's talk</button></a>
+                <a href="#contact"><button class="font-overpass">{{ 'about-me.button' | translate }}</button></a>
             </div>
         </div>
         <div class="foto-container">

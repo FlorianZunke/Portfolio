@@ -1,0 +1,80 @@
+{
+    "landingpage": {
+        "headline-1": "Frontend",
+        "headline-2": "Developer",
+        "scroll-text": "Down"
+    },
+    "about-me": {
+        "headline": "About me",
+        "about-me-text": "Write some information about yourself that is IT related. Why are you passionate about coding Show a desire to learn new technologies. Add a brief description of your problem-solving approach.You can include some key traits like: analytical thinking, creativity, persistence and collaboration",
+        "based": "Based in Treuenbrietzen",
+        "remote": "Open to work Remote",
+        "button": "Let's talk"
+    },
+    "my-skills": {
+        "headline": "My skills",
+        "info-1": "Don`t see the skill you need?",
+        "button": "Contact me",
+        "info-2": "I`m always ready to learn!"
+    },
+    "portfolio": {
+        "headline": "Portfolio",
+        "sub-headline-1": "Explaore a selection of my work here -",
+        "sub-headline-2": "Interact with projects to see my skills in action.",
+        "join-info": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "sharkie-info": "A simple Jump-and-Run game based on object-oriented approach. Help Sharkie to find coins and poision bottles to fight against the killer whale.",
+        "pokedex-info": "Based on the PokeAPI a simple libary that provides and catalogues pokemon informations."
+    },
+    "references": {
+        "headline": "References",
+        "sub-headline-one": "I thrive both independently and as part of team.",
+        "sub-headline-two": "Here`s what my colleagues have to say about working with me."
+    },
+    "contact": {
+        "headline": "Say Hi",
+        "head-1": "Want to discuss a new project?",
+        "head-2": "let's discuss your ideas and make it happen",
+        "text-1": "I've read the",
+        "text-2": "and agree the processeing of my data as outlined.",
+        "link": "privacy police",
+        "button": "Send message"
+    },
+    "form": {
+        "placeholder": "What's your name?",
+        "placeholder-touched": "You forgot your name!",
+        "mail": "yourmail@mail.com",
+        "mail-touched": "I need your email to answer you!",
+        "message": "Hey Flori, I am intrested at ...",
+        "message-touched": "What do you want to know?"
+    },
+    "footer": {
+        "link": "legal notice"
+    },
+    "drop-menu": {
+        "link-1": "About me",
+        "link-2": "My skills",
+        "link-3": "Portfolio"
+    },
+    "references-quotes": [
+        {
+            "name": "A.Albrecht",
+            "position": "Team Partner",
+            "comment": "Working with Florian was always communicative and solution-oriented. I could rely on him and appreciated his open and friendly manner. I look forward to future projects with him."
+        },
+        {
+            "name": "J.Natzschka",
+            "position": "Team Partner",
+            "comment": "Florian did an excellent job during our project work. His ability to translate complex logic into reliable code significantly advanced our project. Furthermore, I particularly appreciate his reliability and the pleasant collaboration with him."
+        },
+        {
+            "name": "M.Marrocu",
+            "position": "Frontend Developer",
+            "comment": "Florian is extremely creative and always finds solutions that push the team forward. His willingness to help sets him apart – he supports others at any time with advice and assistance. Through his strong commitment, he ensures that projects are successfully implemented."
+        }
+    ],
+    "projects": {
+        "join": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.",
+        "sharkie": "A simple Jump-and-Run game based on an object-oriented approach. Help Sharkie to find coins and poison bottles to fight against the killer whale.",
+        "pokedex": "Based on the PokeAPI, a simple library that provides and catalogs Pokémon information."
+    }
+}

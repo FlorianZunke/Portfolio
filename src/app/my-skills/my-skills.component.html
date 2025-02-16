@@ -1,6 +1,6 @@
 <section class="padding">
     <div class="icon-container">
-        <h1 class="font-syne">My skills</h1>
+        <h1 class="font-syne">{{ 'my-skills.headline' | translate }}</h1>
         <div class="icon-wrapper">
             @for (skill of skills; track skill) {
                 <div class="single-skill ">
@@ -11,7 +11,7 @@
         </div>
         <div class="learning-container">
             <img src="assets/icons/Continued_learning.png" alt="">
-            <span class="font-overpass"> Don't see the skill you need? <a class="custom-link" href="#contact">Contact me</a> I'm always ready to learn!</span>
+            <span class="font-overpass"> {{ 'my-skills.info-1' | translate }} </span><a class="custom-link font-overpass" href="#contact">{{ 'my-skills.button' | translate }}</a><span class="font-overpass"> {{ 'my-skills.info-2' | translate }}</span>
         </div>
     </div>
 </section>

@@ -39,6 +39,11 @@ section {
     }
 }
 
+.active-lang {
+    color: $colorGreen;
+    font-weight: bold;
+}
+
 .logo {
     height: 94px;
     width: 104px;

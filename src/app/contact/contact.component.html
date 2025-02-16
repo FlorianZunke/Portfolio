@@ -1,36 +1,39 @@
 <section class="padding">
-        <h1 class="font-syne">Say Hi!</h1>
-        <div>
-            <h2>Want to discuss a new project?</h2>
-            <p>Say hello! let's discuss your ideas and make it happen</p>
-            <form #contactform="ngForm">
-                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                    [placeholder]="getNamePlaceholder(name)" required>
-                @if (!name.valid && name.touched && !name.disabled) {
-                <span class="font-overpass error-text">Please enter our name</span>
-                }
-    
-                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                [placeholder]="getEmailPlaceholder(email)" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-                @if (!email.valid && email.touched && !email.disabled) {
-                <span class="font-overpass error-text">Please enter our email</span>
-                }
-    
-                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-                [placeholder]="getTextboxPlaceholder(message)" required></textarea>
-                @if (!message.valid && message.touched && !message.disabled) {
-                <span class="font-overpass error-text">Please enter a message</span>
-                }
-                <div class="privacyPolice">
-                    <input [(ngModel)]="contactData.privacy"class="checkbox checkbox-field" type="checkbox" name="privacy" id="checkbox">
-                    <span class="font-overpass">I've read the <a class="font-overpass" href="privacyPolice">privacy police</a> and agree the processing of my data as outlined.</span>
-                </div>
-            </form>
+    <h1 class="font-syne">{{ 'contact.headline' | translate }}</h1>
+    <div>
+        <h2>{{ 'contact.head-1' | translate }}</h2>
+        <p>{{ 'contact.head-2' | translate }}</p>
+        <form #contactform="ngForm">
+            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                [placeholder]="getNamePlaceholder(name)" required>
+            @if (!name.valid && name.touched && !name.disabled) {
+            <!-- <span class="font-overpass error-text">Please enter our name</span> -->
+            }
 
-            <div class="arrow-container">
-                <button (click)="onSubmit(contactform)">Send message</button>
-                <a href="#"><img class="arrow-up" src="assets/icons/arrow-up.png" alt=""></a>
+            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                [placeholder]="getEmailPlaceholder(email)" required
+                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+            @if (!email.valid && email.touched && !email.disabled) {
+            <!-- <span class="font-overpass error-text">Please enter our email</span> -->
+            }
+
+            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                [placeholder]="getTextboxPlaceholder(message)" required></textarea>
+            @if (!message.valid && message.touched && !message.disabled) {
+            <!-- <span class="font-overpass error-text">Please enter a message</span> -->
+            }
+            <div class="privacyPolice">
+                <input [(ngModel)]="contactData.privacy" class="checkbox checkbox-field" type="checkbox" name="privacy"
+                    id="checkbox">
+                <span class="font-overpass">{{ 'contact.text-1' | translate }}</span> <a class="font-overpass" href="privacyPolice">{{ 'contact.link' | translate }}</a><span class="font-overpass"> {{ 'contact.text-2' | translate }}</span>
             </div>
+        </form>
+
+        <div class="arrow-container">
+            <button (click)="onSubmit(contactform)" [disabled]="!contactform.valid || !contactData.privacy"
+                [ngStyle]="{ 'opacity': contactform.valid && contactData.privacy ? '1' : '0.5' }">{{ 'contact.button' | translate }}</button>
+            <a href="#"><img class="arrow-up" src="assets/icons/arrow-up.png" alt=""></a>
         </div>
+    </div>
 </section>
 <app-footer></app-footer>
