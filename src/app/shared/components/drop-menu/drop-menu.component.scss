@@ -12,8 +12,7 @@
     >div {
         position: relative;
         display: flex;
-        justify-content: center;
-        align-items: center;
+
         height: 155.25px;
         max-width: 580px;
         width: 100%;
@@ -42,6 +41,13 @@
     }
 }
 
+.drop-element {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
 a {
     font-size: clamp(2rem, -0.383rem + 13.617vw, 6rem);
     font-weight: 700;
@@ -51,7 +57,7 @@ a {
     &:hover {
         cursor: pointer;
 
-        .link_img{
+        .link_img {
             cursor: pointer;
             animation: scaleUp 0.25s forwards;
             transform: translateY(-25px);

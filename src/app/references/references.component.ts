@@ -12,6 +12,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 
 export class ReferencesComponent {
+  hovered: boolean = false;
   referenceDatas = signal<any[]>([]);
 
   constructor(private translate: TranslateService) {
@@ -25,5 +26,11 @@ export class ReferencesComponent {
     this.translate.get('references-quotes').subscribe((translatedReferences) => {
       this.referenceDatas.set(translatedReferences);
     });
+  }
+
+  onHover() {
+    if (!this.hovered) {
+      this.hovered = true;
+    }
   }
 }

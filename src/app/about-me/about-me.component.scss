@@ -83,12 +83,27 @@ section {
     padding-bottom: 75px;
     display: flex;
     justify-content: flex-end;
+
+    >img {
+        transform: translateX(45px) translateY(-45px);
+    
+        &.hovered {
+            transition: transform 0,25s ease-in-out;
+            transform: translateX(0) translateY(0);
+        }
+    }
+}
+
+.hovered {
+    transition: transform 0,25s ease-in-out;
+    transform: translateX(0) translateY(0);
 }
 
 .button-position-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    padding-bottom: 32px;
 }
 
 .work-location-info {
@@ -147,6 +162,7 @@ section {
 
     .foto-container {
 
+        padding-top: 16px;
         width: 400px;
 
         >img {
@@ -187,7 +203,7 @@ section {
     }
 
     .foto-container {
-
+        padding-top: 16px;
         width: 350px;
 
         >img {
@@ -215,6 +231,8 @@ section {
 
 @media screen and (min-width: 280px) and (max-width: 500px) {
     .foto-container {
+        padding-top: 16px;
+        margin-top: 16px;
         >img {
             height: 250px;
             width: 250px;
@@ -253,15 +271,3 @@ section {
         width: 100%;
     }
 }
-
-// @media (any-hover: none) {
-//     h1 {
-//         animation: mobileColorChange 500ms forwards;
-//     }
-
-//     .foto-container {
-//         >.border-hover {
-//             border: 4px solid $colorBlack;
-//         }
-//     }
-// }

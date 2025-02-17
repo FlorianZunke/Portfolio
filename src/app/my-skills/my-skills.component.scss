@@ -29,6 +29,8 @@ section {
     max-width: 1920px;
     width: 100%;
     border: 4px solid $colorBlack;
+    margin-left: 10px;
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -47,6 +49,12 @@ a {
     &:hover {
         font-weight: bold;
     }
+}
+
+.learning-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .learning-container {
@@ -86,11 +94,27 @@ a {
 .arrow-position-container {
     display: flex;
     justify-content: flex-start;
+    margin-left: 25px;
     width: 100%;
     max-width: 1920px;
     padding-top: 75px;
     padding-bottom: 75px;
+
+    >img {
+        transform: translateX(-45px) translateY(-45px);
+    
+        &.hovered {
+            transition: transform 0,25s ease-in-out;
+            transform: translateX(0) translateY(0);
+        }
+    }
 }
+
+.hovered {
+    transition: transform 0,25s ease-in-out;
+    transform: translateX(0) translateY(0);
+}
+
 
 .custom-link {
     position: relative;
@@ -173,8 +197,13 @@ a {
             "si si si"
             "st st st";
         grid-template-columns: repeat(3, 1fr);
-        grid-auto-rows: minmax(50px, auto);
-        gap: 50px;
+        grid-auto-rows: minmax(100px, auto);
+        gap: 25px;
+    }
+
+    .learning-info {
+        display: flex;
+        flex-direction: column;
     }
 
     .single-skill:nth-last-child(1) {
@@ -193,7 +222,7 @@ a {
             "si si"
             "st st";
         grid-template-columns: repeat(2, 1fr);
-        grid-auto-rows: minmax(15px, auto);
+        grid-auto-rows: minmax(100px, auto);
         gap: 15px;
     }
 
@@ -204,6 +233,7 @@ a {
     .learning-info {
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .learning-container {

@@ -5,7 +5,7 @@ import { OverlayService } from './services/overlay.service';
 import { OverlayComponent } from './shared/components/drop-menu/drop-menu.component';
 
 import { TranslationService } from './services/translation.service';
-import { TranslateService } from '@ngx-translate/core';
+import { FaviconService } from './services/favicon.service';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +21,8 @@ export class AppComponent {
 
   title = 'Portfolio';
 
-  constructor() {
+  constructor(private faviconService: FaviconService) {
     this.translateService.getCurrentLanguage();
+    this.faviconService.setFaviconBasedOnColorScheme();
   }
 }

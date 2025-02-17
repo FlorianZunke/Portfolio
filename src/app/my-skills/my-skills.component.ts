@@ -11,7 +11,15 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class MySkillsComponent {
 
+  hovered: boolean = false;
+
   constructor(private translate: TranslateService) {}
+
+  onHover() {
+    if (!this.hovered) {
+      this.hovered = true;
+    }
+  }
 
   skills = [
     {

@@ -1,9 +1,9 @@
 <section  class="padding">
     <h1 class="font-syne">{{ 'contact.headline' | translate }}</h1>
-    <div>
+    <div class="padding">
         <h2>{{ 'contact.head-1' | translate }}</h2>
         <p>{{ 'contact.head-2' | translate }}</p>
-        <form #contactform="ngForm">
+        <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
                 [placeholder]="getNamePlaceholder(name)" required>
             @if (!name.valid && name.touched && !name.disabled) {
@@ -23,9 +23,10 @@
             <!-- <span class="font-overpass error-text">Please enter a message</span> -->
             }
             <div class="privacyPolice">
-                <input [(ngModel)]="contactData.privacy" class="checkbox checkbox-field" type="checkbox" name="privacy"
-                    id="checkbox">
-                <span class="font-overpass">{{ 'contact.text-1' | translate }}</span> <a class="font-overpass" href="privacyPolice">{{ 'contact.link' | translate }}</a><span class="font-overpass"> {{ 'contact.text-2' | translate }}</span>
+                <input [(ngModel)]="contactData.privacy" class="checkbox checkbox-field" type="checkbox" name="privacy" id="checkbox">
+                <div>
+                    <span class="font-overpass">{{ 'contact.text-1' | translate }}</span> <a class="font-overpass" href="privacyPolice">{{ 'contact.link' | translate }}</a><span class="font-overpass"> {{ 'contact.text-2' | translate }}</span>
+                </div>
             </div>
         </form>
 

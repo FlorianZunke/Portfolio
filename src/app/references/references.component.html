@@ -1,6 +1,6 @@
 <section class="padding">
     <h1 class="font-syne">{{ 'references.headline' | translate }}</h1>
-    <p class="font-overpass">{{ 'references.sub-headline-one' | translate }} <br> {{ 'references.sub-headline-two' | translate }}
+    <p class="font-overpass padding">{{ 'references.sub-headline-one' | translate }} <br> {{ 'references.sub-headline-two' | translate }}
     </p>
     <div class="card-wrapper card">
         @for (card of referenceDatas(); track card.id) {
@@ -16,5 +16,5 @@
     </div>
 </section>
 <div class="arrow-position-container padding">
-    <img src="assets/icons/Arrow_left.png" alt="">
+    <img src="assets/icons/Arrow_left.png" alt="" [ngClass]="{ 'hovered': hovered }" (mouseover)="onHover()">
 </div>

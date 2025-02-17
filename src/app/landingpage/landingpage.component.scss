@@ -13,6 +13,7 @@ h2 {
     color: $colorGreen;
     font-size: clamp(1rem, 0.4428rem + 3.1841vw, 3rem);
     font-weight: 700;
+    margin-right: 25px;
     white-space: nowrap;
 }
 
@@ -67,6 +68,7 @@ section {
 .cutLine {
     border: 2px solid $colorBlack;
     width: 100%;
+    margin-left: 25px;
 }
 
 .mid-part {
@@ -119,11 +121,15 @@ section {
 
 @media screen and (min-width: 280px) and (max-width: 450px) {
     a {
-        left: -75px;
+        left: -50px;
     }
 
     .bottom-part {
         max-width: 80px;
         width: 100%;
+    }
+
+    .mid-part {
+        gap: 16px;
     }
 }

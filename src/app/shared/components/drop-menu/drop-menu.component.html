@@ -1,13 +1,17 @@
 <div *ngIf="overlayService.overlayVisible$ | async" class="overlay">
         <app-header></app-header>
         <nav class="dropMenu">
-                <div>
+                <div class="drop-element">
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="about_me" (click)="navigateToSection('about_me')">{{ 'drop-menu.link-1' | translate }}</a>
+                        <div >
+                                <a class="font-syne" [routerLink]="['/']" fragment="about_me" (click)="navigateToSection('about_me')">{{ 'drop-menu.link-1' | translate }}</a>
+                        </div>        
                 </div>
                 <div>
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="skills" (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
+                        <div>
+                                <a class="font-syne" [routerLink]="['/']" fragment="skills" (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
+                        </div>
                 </div>
                 <div>
                         <div class="border-hover"></div>

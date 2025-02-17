@@ -23,7 +23,7 @@ export class ContactComponent {
     messageError: this.translate.instant('contact.placeholder.messageError'),
   });
 
-  constructor(private translate: TranslateService) { 
+  constructor(private translate: TranslateService) {
     this.translate.onLangChange.subscribe(() => {
       this.updatePlaceholders();
     });
@@ -52,7 +52,7 @@ export class ContactComponent {
   mailTest = true;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://florian-zunke.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -68,6 +68,7 @@ export class ContactComponent {
         .subscribe({
           next: (response) => {
 
+            // Hier kann noch code hin
             ngForm.resetForm();
           },
           error: (error) => {
@@ -76,7 +77,9 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      // Hier ders elbe code wie oben
+      console.log('funktioniert');
+      
       ngForm.resetForm();
     }
   }

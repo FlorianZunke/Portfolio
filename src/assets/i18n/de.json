@@ -12,7 +12,7 @@
         "button": "Lass uns reden"
     },
     "my-skills": {
-        "headline": "Fähigkeiten",
+        "headline": "Skills",
         "info-1": "Die gesuchte Fähigkeit ist nicht dabei?",
         "button": "Kontaktiere mich",
         "info-2": "Ich bin immer bereit zu lernen!"
@@ -49,7 +49,7 @@
     },
     "drop-menu": {
         "link-1": "Über mich",
-        "link-2": "Fähigkeiten",
+        "link-2": "Skills",
         "link-3": "Portfolio"
     },
     "references-quotes": [

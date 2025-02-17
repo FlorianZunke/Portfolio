@@ -1,12 +1,12 @@
 <section class="padding">
     <h1 class="font-syne">{{ 'portfolio.headline' | translate }}</h1>
-    <p class="font-overpass">
+    <p class="font-overpass padding">
         {{ 'portfolio.sub-headline-1' | translate }} <br> 
         {{ 'portfolio.sub-headline-2' | translate }}
     </p>
     <main>
         @for (project of projects(); track project; let index = $index) {
-            <section [ngClass]="{ 'reverse': index % 2 !== 0 }" style="width: 100%;" class="project">
+            <section [ngClass]="{ 'reverse': index % 2 !== 0 }" style="width: 100%;" class="project padding">
                 <div class="position-relative">
                     <div class="border-hover">
                         <img class="hover-Arrow" src="assets/icons/hover_arrow.png" alt="">

@@ -20,5 +20,5 @@
     </div>
 </section>
 <div class="arrow-position-container padding">
-    <img src="assets/icons/Arrow_right.png" alt="">
+    <img src="assets/icons/Arrow_right.png" alt="" [ngClass]="{ 'hovered': hovered }" (mouseover)="onHover()">
 </div>
