@@ -1,9 +1,9 @@
-<section  class="padding">
+<section class="padding">
     <h1 class="font-syne">{{ 'contact.headline' | translate }}</h1>
-    <div class="padding">
+    <div>
         <h2>{{ 'contact.head-1' | translate }}</h2>
         <p>{{ 'contact.head-2' | translate }}</p>
-        <form (ngSubmit)="onSubmit(contactform)" #contactform="ngForm">
+        <form #contactform="ngForm">
             <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
                 [placeholder]="getNamePlaceholder(name)" required>
             @if (!name.valid && name.touched && !name.disabled) {
@@ -23,16 +23,21 @@
             <!-- <span class="font-overpass error-text">Please enter a message</span> -->
             }
             <div class="privacyPolice">
-                <input [(ngModel)]="contactData.privacy" class="checkbox checkbox-field" type="checkbox" name="privacy" id="checkbox">
+                <input [(ngModel)]="contactData.privacy" class="checkbox" type="checkbox" name="privacy" id="checkbox">
                 <div>
-                    <span class="font-overpass">{{ 'contact.text-1' | translate }}</span> <a class="font-overpass" href="privacyPolice">{{ 'contact.link' | translate }}</a><span class="font-overpass"> {{ 'contact.text-2' | translate }}</span>
+                    <span class="font-overpass">{{ 'contact.text-1' | translate }}</span> <a class="font-overpass"
+                        href="privacyPolice">{{ 'contact.link' | translate }}</a><span class="font-overpass"> {{
+                        'contact.text-2' | translate }}</span>
                 </div>
+            </div>
+            <div class="flex-center">
+                <button (click)="onSubmit(contactform)" [disabled]="!contactform.valid || !contactData.privacy"
+                [ngStyle]="{ 'opacity': contactform.valid && contactData.privacy ? '1' : '0.5' }">{{
+                'contact.button' | translate }}</button>
             </div>
         </form>
 
         <div class="arrow-container">
-            <button (click)="onSubmit(contactform)" [disabled]="!contactform.valid || !contactData.privacy"
-                [ngStyle]="{ 'opacity': contactform.valid && contactData.privacy ? '1' : '0.5' }">{{ 'contact.button' | translate }}</button>
             <a href="#"><img class="arrow-up" src="assets/icons/arrow-up.png" alt=""></a>
         </div>
     </div>

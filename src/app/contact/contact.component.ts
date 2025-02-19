@@ -49,7 +49,7 @@ export class ContactComponent {
     privacy: false,
   }
 
-  mailTest = true;
+  mailTest = false;
 
   post = {
     endPoint: 'https://florian-zunke.de/sendMail.php',
@@ -77,9 +77,6 @@ export class ContactComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      // Hier ders elbe code wie oben
-      console.log('funktioniert');
-      
       ngForm.resetForm();
     }
   }

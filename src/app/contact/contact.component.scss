@@ -22,15 +22,18 @@ section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
+        bottom: -77px;
 
         >form {
             max-width: 617px;
             min-width: 250px;
-            width: auto;
+            width: 100%;
             display: flex;
             flex-direction: column;
             gap: 20px;
             padding-bottom: 16px;
+            z-index: 5;
         }
     }
 }
@@ -56,7 +59,6 @@ section {
     }
 
     &:hover {
-
         a {
             font-weight: bold;
         }
@@ -68,12 +70,9 @@ section {
 }
 
 h1 {
-    max-width: 430px;
-    width: 100%;
-    font-size: clamp(2.8125rem, 2.4604rem + 2.0122vw, 4.875rem);
+    font-size: clamp(2.25rem, 1.8018rem + 2.561vw, 4.875rem);
     font-weight: 800;
     gap: 10px;
-    padding-bottom: 30px;
 
     &:hover {
         color: $colorGreen;
@@ -148,14 +147,20 @@ textarea {
     }
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
 .arrow-container {
     position: relative;
+    bottom: 87px;
     width: 100%;
     height: 77px;
     max-width: 1920px;
     display: flex;
     justify-content: center;
-
 
     >a {
         transform-origin: bottom;
@@ -180,20 +185,11 @@ button {
     cursor: pointer;
     width: 253px;
     font-weight: 400;
-}
-
-.checkbox-field {
-    margin-right: 10px;
-    height: 24px;
-    width: 24px;
-
-    &:hover {
-        border-radius: 0;
-        cursor: pointer;
-    }
+    z-index: 100;
 }
 
 input[type="checkbox"] {
+    margin-right: 10px;
     padding: 0;
     width: 24px;
     height: 24px;
@@ -202,7 +198,11 @@ input[type="checkbox"] {
     -moz-appearance: none;
     background-color: $colorBlack;
     border: 2px solid $colorCream;
-    cursor: pointer;
+
+    &:hover {
+        border-radius: 0;
+        cursor: pointer;
+    }
 }
 
 input[type="checkbox"]:checked {
@@ -213,31 +213,31 @@ input[type="checkbox"]:checked {
     color: $colorError;
 }
 
-
 @media screen and (min-width: 540px) and (max-width: 900px) {
     .arrow-container {
         display: none;
-    }
-
-    input {
-        max-width: 500px;
-        width: 100%;
-        height: 50px;
-        padding: 15px 25px;
-    }
-
-    textarea {
-        max-width: 500px;
-        width: 100%;
-        height: 202px;
-        padding: 15px 25px;
     }
 
     .privacyPolice {
         >div:first-child {
             display: block;
         }
+    }
 
+    section {
+        justify-content: flex-end;
+        height: 800px;
+
+        >div {
+            bottom: 0;
+        }
+    }
+
+    input[type="checkbox"] {
+        margin-right: 10px;
+        padding: 10px;
+        width: 10px;
+        height: 10px;
     }
 }
 
@@ -246,17 +246,19 @@ input[type="checkbox"]:checked {
         display: none;
     }
 
-    input {
-        max-width: 617px;
-        width: 100%;
-        height: 50px;
-        padding: 15px 25px;
+    section {
+        justify-content: flex-end;
+        height: 800px;
+
+        >div {
+            bottom: 0;
+        }
     }
 
-    textarea {
-        max-width: 617px;
-        width: 100%;
-        height: 202px;
-        padding: 15px 25px;
+    input[type="checkbox"] {
+        margin-right: 10px;
+        padding: 6px;
+        width: 10px;
+        height: 10px;
     }
 }

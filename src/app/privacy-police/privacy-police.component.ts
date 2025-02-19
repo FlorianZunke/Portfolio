@@ -5,15 +5,15 @@ import { TranslationService } from '../services/translation.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-privacy-police',
-  standalone: true,
-  imports: [CommonModule ,HeaderComponent, TranslateModule],
-  templateUrl: './privacy-police.component.html',
-  styleUrl: './privacy-police.component.scss'
+    selector: 'app-privacy-police',
+    standalone: true,
+    imports: [CommonModule, HeaderComponent, TranslateModule],
+    templateUrl: './privacy-police.component.html',
+    styleUrl: './privacy-police.component.scss'
 })
 export class PrivacyPoliceComponent {
 
-  deTemplate: string = `<section class="padding">
+    deTemplate: string = `<section class="padding">
     <h1>Datenschutzerklärung</h1>
     <h2 id="m4158">Präambel</h2>
     <p>Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten
@@ -666,34 +666,268 @@ export class PrivacyPoliceComponent {
     </p>
 </section>`;
 
-  enTemplate: string = ``;
+    enTemplate: string = `<section class="padding">
+    <h1>Privacy Policy</h1>
+    <h2 id="m4158">Preamble</h2>
+    <p>With the following privacy policy, we would like to inform you about which types of your personal data
+        (hereinafter also referred to as "data") we process for which purposes and to what extent as part of providing our application.</p>
+    <p>The terms used are not gender-specific.</p>
+    
+    <p>Last updated: February 16, 2025</p>
+    <h2>Table of Contents</h2>
+    <ul class="index">
+        <li><a class="index-link" href="#m4158">Preamble</a></li>
+        <li><a class="index-link" href="#m3">Controller</a></li>
+        <li><a class="index-link" href="#mOverview">Overview of Processing</a></li>
+        <li><a class="index-link" href="#m2427">Relevant Legal Bases</a></li>
+        <li><a class="index-link" href="#m27">Security Measures</a></li>
+        <li><a class="index-link" href="#m25">Transfer of Personal Data</a></li>
+        <li><a class="index-link" href="#m12">General Information on Data Storage and Deletion</a></li>
+        <li><a class="index-link" href="#m10">Rights of Data Subjects</a></li>
+        <li><a class="index-link" href="#m225">Provision of the Online Offer and Web Hosting</a></li>
+        <li><a class="index-link" href="#m134">Use of Cookies</a></li>
+        <li><a class="index-link" href="#m367">Registration, Login, and User Account</a></li>
+        <li><a class="index-link" href="#m432">Community Functions</a></li>
+        <li><a class="index-link" href="#m182">Contact and Inquiry Management</a></li>
+        <li><a class="index-link" href="#m638">Marketing Communication via Email, Mail, Fax, or Telephone</a></li>
+        <li><a class="index-link" href="#m136">Social Media Presence</a></li>
+        <li><a class="index-link" href="#m328">Plug-ins and Embedded Functions and Content</a></li>
+        <li><a class="index-link" href="#m42">Definitions</a></li>
+    </ul>
+    <h2 id="m3">Controller</h2>
+    <p>Zunke Florian,<br>Albert-Schweitzer-Straße 25a,<br>14929 Treuenbrietzen, Germany</p>
+    <p>Email address: <a href="mailto:florianzunk@gmx.de">florianzunk&#64;gmx.de</a></p>
+    <p>Legal notice: <a href="https://florian-zunke.de/legalNotice" target="_blank">https://florian-zunke.de/legalNotice</a>
+    </p>
+    
+    <h2 id="mOverview">Overview of Processing</h2>
+    <p>The following overview summarizes the types of data processed, the purposes of processing, and the data subjects involved.</p>
+    <h3>Types of Processed Data</h3>
+    <ul>
+        <li>Master data.</li>
+        <li>Contact data.</li>
+        <li>Content data.</li>
+        <li>Usage data.</li>
+        <li>Meta, communication, and procedural data.</li>
+        <li>Log data.</li>
+    </ul>
+    <h3>Categories of Data Subjects</h3>
+    <ul>
+        <li>Communication partners.</li>
+        <li>Users.</li>
+    </ul>
+    <h3>Purposes of Processing</h3>
+    <ul>
+        <li>Provision of contractual services and fulfillment of contractual obligations.</li>
+        <li>Communication.</li>
+        <li>Security measures.</li>
+        <li>Direct marketing.</li>
+        <li>Organizational and administrative procedures.</li>
+        <li>Feedback.</li>
+        <li>Marketing.</li>
+        <li>Profiles with user-related information.</li>
+        <li>Provision of our online offer and user-friendliness.</li>
+        <li>IT infrastructure.</li>
+        <li>Public relations.</li>
+        <li>Sales promotion.</li>
+    </ul>
+    <h2 id="m2427">Relevant Legal Bases</h2>
+    <p><strong>Relevant legal bases under the GDPR:</strong> Below is an overview of the legal bases of the GDPR on which we process personal data. Please note that in addition to the provisions of the GDPR, national data protection regulations may apply in your or our country of residence. If more specific legal bases apply in individual cases, we will inform you about them in this privacy policy.</p>
+    <ul>
+        <li><strong>Consent (Art. 6 para. 1 sentence 1 lit. a GDPR)</strong> - The data subject has given their consent to the processing of their personal data for one or more specific purposes.</li>
+        <li><strong>Contract performance and pre-contractual inquiries (Art. 6 para. 1 sentence 1 lit. b GDPR)</strong> - Processing is necessary for the performance of a contract to which the data subject is a party or to take steps at the data subject's request prior to entering into a contract.</li>
+        <li><strong>Legitimate interests (Art. 6 para. 1 sentence 1 lit. f GDPR)</strong> - Processing is necessary for the purposes of the legitimate interests pursued by the controller or by a third party, provided that the interests or fundamental rights and freedoms of the data subject do not override these interests.</li>
+    </ul>
+    <p><strong>National Data Protection Regulations in Germany:</strong> In addition to the GDPR, national data protection regulations apply in Germany, including the Federal Data Protection Act (BDSG). The BDSG contains specific regulations regarding access rights, deletion rights, objection rights, processing of special categories of personal data, processing for other purposes, and automated decision-making including profiling. State data protection laws of individual federal states may also apply.</p>
 
-  currentTemplate: string = this.deTemplate;
+    <h2 id="m27">Security Measures</h2>
+    <p>We take appropriate technical and organizational measures to ensure a level of security appropriate to the risk in accordance with legal requirements.</p>
+    <p>These measures include securing the confidentiality, integrity, and availability of data through physical and electronic access control, input control, transmission control, availability security, and separation of data. Additionally, we have procedures in place to exercise data subjects' rights, delete data, and respond to data threats. We consider the protection of personal data already during the development or selection of hardware, software, and procedures according to the principles of data protection by design and by default.</p>
 
-  constructor(private translate: TranslateService, public translationService: TranslationService) {}
+    <h2 id="m25">Transfer of Personal Data</h2>
+    <p>In the course of processing personal data, data may be transmitted to or disclosed to other entities, companies, legally independent organizational units, or individuals. The recipients of this data may include IT service providers or providers of services and content integrated into a website. In such cases, we comply with legal requirements and conclude appropriate contracts to protect your data.</p>
+    <p><strong>Further Information on Processing Activities, Procedures, and Services:</strong></p>
+<ul class="m-elements">
+    <li><strong>Provision of Online Services on Rented Storage Space:</strong> To provide our online services, we use storage space, computing capacity, and software that we rent or otherwise obtain from a corresponding server provider (also known as a "web host"); <span class=""><strong>Legal Basis:</strong> Legitimate Interests (Art. 6 para. 1 sentence 1 lit. f) GDPR).</span></li>
+    <li><strong>Collection of Access Data and Log Files:</strong> Access to our online services is logged in the form of so-called "server log files." Server log files may include the address and name of the accessed web pages and files, date and time of access, transferred data volumes, messages about successful retrieval, browser type and version, the user’s operating system, referrer URL (the previously visited page), and, as a rule, IP addresses and the requesting provider. Server log files can be used for security purposes, e.g., to prevent server overloads (especially in cases of abusive attacks, such as DDoS attacks), and to ensure server performance and stability; <span class=""><strong>Legal Basis:</strong> Legitimate Interests (Art. 6 para. 1 sentence 1 lit. f) GDPR). </span><strong>Data Deletion:</strong> Log file information is stored for a maximum of 30 days and then deleted or anonymized. Data required for evidentiary purposes is exempt from deletion until the respective incident is conclusively resolved.</li>
+    <li><strong>Email Sending and Hosting:</strong> The web hosting services we use also include the sending, receiving, and storage of emails. For these purposes, recipient and sender addresses, as well as further information concerning email transmission (e.g., involved providers) and the contents of respective emails, are processed. The aforementioned data may also be processed for spam detection purposes. Please note that emails are generally not sent in an encrypted format on the internet. While emails are usually encrypted in transit, they are not encrypted on the servers from which they are sent and received unless an end-to-end encryption method is used. Therefore, we cannot assume responsibility for the transmission path of emails between the sender and reception on our server; <span class=""><strong>Legal Basis:</strong> Legitimate Interests (Art. 6 para. 1 sentence 1 lit. f) GDPR).</span></li>
+    <li><strong>ALL-INKL:</strong> Services related to the provision of IT infrastructure and associated services (e.g., storage space and/or computing capacity); <strong>Service Provider:</strong> ALL-INKL.COM - Neue Medien Münnich, Owner: René Münnich, Hauptstraße 68, 02742 Friedersdorf, Germany; <span class=""><strong>Legal Basis:</strong> Legitimate Interests (Art. 6 para. 1 sentence 1 lit. f) GDPR); </span><strong>Website:</strong> <a href="https://all-inkl.com/" target="_blank">https://all-inkl.com/</a>; <strong>Privacy Policy:</strong> <a href="https://all-inkl.com/datenschutzinformationen/" target="_blank">https://all-inkl.com/datenschutzinformationen/</a>. <strong>Data Processing Agreement:</strong> Provided by the service provider.</li>
+</ul>
 
-  
-  ngOnInit(): void {
-    this.loadTemplateBasedOnLanguage();
-    this.translate.onLangChange.subscribe(() => {
-      this.loadTemplateBasedOnLanguage();
-    });
-  }
+<h2 id="m134">Use of Cookies</h2>
+<p>The term "cookies" refers to functions that store and retrieve information on users' devices. Cookies may be used for different purposes, such as ensuring the functionality, security, and convenience of online services, as well as for analyzing visitor flows. We use cookies in accordance with legal regulations. Where required, we obtain users' prior consent. If consent is not necessary, we base our use of cookies on our legitimate interests. This applies when storing and retrieving information is essential to providing expressly requested content and functions. This includes storing settings and ensuring the functionality and security of our online services. Consent can be withdrawn at any time. We provide clear information about the scope of consent and which cookies are used.</p>
+
+<p><strong>Legal Basis for Data Processing:</strong> Whether we process personal data using cookies depends on user consent. If consent is given, it serves as the legal basis. Without consent, we rely on our legitimate interests, as explained in this section and in the context of the respective services and processes.</p>
+
+<p><strong>Storage Duration:</strong> The following types of cookies are distinguished in terms of storage duration:</p>
+<ul>
+    <li><strong>Temporary Cookies (also: Session Cookies):</strong> Temporary cookies are deleted at the latest after a user leaves an online service and closes their device (e.g., browser or mobile application).</li>
+    <li><strong>Permanent Cookies:</strong> Permanent cookies remain stored even after the device is closed. For example, login status can be saved, and preferred content can be displayed directly when users revisit a website. Similarly, data collected via cookies may be used for reach measurement. If we do not specify the type and storage duration of cookies explicitly (e.g., when obtaining consent), users should assume that these are permanent and may be stored for up to two years.</li>
+</ul>
+
+<p><strong>General Information on Withdrawal and Objection (Opt-out):</strong> Users can withdraw their consent at any time and object to processing according to legal requirements, including via their browser’s privacy settings.</p>
+
+<ul class="m-elements">
+    <li><strong>Processed Data Types:</strong> Meta, communication, and procedural data (e.g., IP addresses, timestamps, identification numbers, involved persons).</li>
+    <li><strong>Affected Persons:</strong> Users (e.g., website visitors, online service users).</li>
+    <li class=""><strong>Legal Basis:</strong> Legitimate Interests (Art. 6 para. 1 sentence 1 lit. f) GDPR). Consent (Art. 6 para. 1 sentence 1 lit. a) GDPR).</li>
+</ul>
+
+<p><strong>Further Information on Processing Activities, Procedures, and Services:</strong></p>
+
+<ul class="m-elements">
+    <li><strong>Processing of Cookie Data Based on Consent:</strong> We use a consent management solution to obtain users' consent for the use of cookies or the procedures and providers specified in the consent management process. This process serves to obtain, record, manage, and withdraw consent, particularly concerning the use of cookies and similar technologies that store, retrieve, and process information on users' devices. The consent statements are stored to avoid repeated requests and to document consent in compliance with legal requirements. Storage occurs either server-side and/or in a cookie (so-called opt-in cookie) or using similar technologies to assign consent to a specific user or their device. Unless otherwise specified, consent storage duration is up to two years. A pseudonymous user identifier is created and stored along with the time of consent, the extent of consent (e.g., applicable cookie categories and/or service providers), as well as browser, system, and device information; <span class=""><strong>Legal Basis:</strong> Consent (Art. 6 para. 1 sentence 1 lit. a) GDPR).</span></li>
+</ul>
+<h2 id="m182">Contact and Inquiry Management</h2>
+<p>When contacting us (e.g., by mail, contact form, email, phone, or via social media) and within the scope of existing user and business relationships, the details of the inquiring persons are processed to the extent necessary to respond to contact inquiries and any requested measures.</p>
+<ul class="m-elements">
+    <li><strong>Types of Data Processed:</strong> Inventory data (e.g., full name, residential address, contact information, customer number, etc.); Contact data (e.g., postal and email addresses or phone numbers); Content data (e.g., textual or visual messages and posts, as well as related information such as authorship details or creation timestamps); Usage data (e.g., page visits and duration, click paths, usage intensity and frequency, types of devices and operating systems used, interactions with content and features). Meta, communication, and procedural data (e.g., IP addresses, timestamps, identification numbers, involved persons).</li>
+    <li><strong>Affected Persons:</strong> Communication partners.</li>
+    <li><strong>Processing Purposes:</strong> Communication; organizational and administrative procedures; feedback (e.g., collecting feedback via online form). Providing our online offering and user-friendliness.</li>
+    <li><strong>Retention and Deletion:</strong> Deletion in accordance with the section "General Information on Data Retention and Deletion."</li>
+    <li class=""><strong>Legal Bases:</strong> Legitimate interests (Art. 6 Para. 1 Sentence 1 lit. f GDPR). Contract fulfillment and pre-contractual inquiries (Art. 6 Para. 1 Sentence 1 lit. b GDPR).</li>
+</ul>
+<p><strong>Further Notes on Processing Procedures, Methods, and Services:</strong></p>
+<ul class="m-elements">
+    <li><strong>Contact Form:</strong> When contacting us via our contact form, email, or other communication channels, we process the personal data provided to us to respond to and handle the respective request. This generally includes details such as name, contact information, and any additional information shared with us that is necessary for appropriate processing. We use this data exclusively for the stated purpose of communication and contact;
+        <span class=""><strong>Legal Bases:</strong> Contract fulfillment and pre-contractual inquiries (Art. 6 Para. 1 Sentence 1 lit. b GDPR), Legitimate interests (Art. 6 Para. 1 Sentence 1 lit. f GDPR).</span></li>
+</ul>
+<h2 id="m638">Marketing Communication via Email, Mail, Fax, or Phone</h2>
+<p>We process personal data for marketing communication purposes, which may take place through various channels such as email, telephone, mail, or fax, in accordance with legal requirements.</p>
+<p>Recipients have the right to revoke their consent at any time or to object to marketing communication at any time.</p>
+<p>After revocation or objection, we retain the data necessary to demonstrate prior authorization for contact or mailings for up to three years after the end of the year in which the revocation or objection was made, based on our legitimate interests. The processing of this data is restricted to the purpose of potential defense against claims. Based on the legitimate interest in permanently respecting the revocation or objection of users, we also store the data necessary to prevent renewed contact (e.g., depending on the communication channel, email address, phone number, name).</p>
+<ul class="m-elements">
+    <li><strong>Types of Data Processed:</strong> Inventory data (e.g., full name, residential address, contact information, customer number, etc.); Contact data (e.g., postal and email addresses or phone numbers). Content data (e.g., textual or visual messages and posts, as well as related information such as authorship details or creation timestamps).</li>
+    <li><strong>Affected Persons:</strong> Communication partners.</li>
+    <li><strong>Processing Purposes:</strong> Direct marketing (e.g., via email or mail); marketing. Sales promotion.</li>
+    <li><strong>Retention and Deletion:</strong> Deletion in accordance with the section "General Information on Data Retention and Deletion."</li>
+    <li class=""><strong>Legal Bases:</strong> Consent (Art. 6 Para. 1 Sentence 1 lit. a GDPR). Legitimate interests (Art. 6 Para. 1 Sentence 1 lit. f GDPR).</li>
+</ul>
+<h2 id="m136">Social Media Presences</h2>
+<p>We maintain online presences within social networks and process user data in this context to communicate with active users or to offer information about us.</p>
+<p>We point out that user data may be processed outside the European Union. This may result in risks for users, such as making it more difficult to enforce their rights.</p>
+<p>Furthermore, user data is usually processed within social networks for market research and advertising purposes. For example, usage profiles can be created based on user behavior and the resulting interests. These profiles may be used, for instance, to display advertisements within and outside the networks that presumably correspond to users' interests. For this purpose, cookies are usually stored on users' devices, which store usage behavior and interests. Additionally, data may also be stored in usage profiles regardless of the devices used by users (especially if they are members of the respective platforms and logged in).</p>
+<p>For a detailed presentation of the respective processing forms and opt-out options, we refer to the privacy policies and statements of the operators of the respective networks.</p>
+<p>We also point out that inquiries for information and the exercise of data subject rights are most effectively addressed to the providers themselves. Only they have access to user data and can take direct measures and provide information. If you still need assistance, you can contact us.</p>
+<ul class="m-elements">
+    <li><strong>Types of Data Processed:</strong> Contact data (e.g., postal and email addresses or phone numbers); Content data (e.g., textual or visual messages and posts, as well as related information such as authorship details or creation timestamps). Usage data (e.g., page visits and duration, click paths, usage intensity and frequency, types of devices and operating systems used, interactions with content and features).</li>
+    <li><strong>Affected Persons:</strong> Users (e.g., website visitors, online service users).</li>
+    <li><strong>Processing Purposes:</strong> Communication; feedback (e.g., collecting feedback via online form). Public relations.</li>
+    <li><strong>Retention and Deletion:</strong> Deletion in accordance with the section "General Information on Data Retention and Deletion."</li>
+    <li class=""><strong>Legal Bases:</strong> Legitimate interests (Art. 6 Para. 1 Sentence 1 lit. f GDPR).</li>
+</ul>
+<h2 id="m328">Plugins and Embedded Features as well as Content</h2>
+<p>We integrate functional and content elements into our online offering that are retrieved from the servers of their respective providers (hereinafter referred to as "third-party providers"). These elements may include graphics, videos, or maps (hereinafter uniformly referred to as "content").</p>
+<p>The integration always requires that the third-party providers of these contents process the users' IP addresses, as they could not send the content to their browser without the IP address. The IP address is therefore required for displaying these contents or functions. We endeavor to use only those contents whose respective providers use the IP address solely for delivering the contents. Third-party providers may also use so-called pixel tags (invisible graphics, also called "web beacons") for statistical or marketing purposes. These "pixel tags" can be used to evaluate information such as visitor traffic on the pages of this website. The pseudonymous information may also be stored in cookies on users' devices and include, among other things, technical details about the browser and operating system, referring websites, visit times, and further information about the use of our online offering, and may also be combined with such information from other sources.</p>
+<p><strong>Further information on processing procedures, methods, and services:</strong></p>
+<ul class="m-elements">
+    <li><strong>Google Fonts (self-hosted on our server): </strong>Provision of font files to ensure a user-friendly 
+        presentation of our online offering; <strong>Service provider:</strong> The Google Fonts are hosted on our 
+        server, and no data is transmitted to Google; <span class=""><strong>Legal basis:</strong> Legitimate interests 
+        (Art. 6 para. 1 sentence 1 lit. f GDPR).</span></li>
+    <li><strong>LinkedIn plugins and content: </strong>LinkedIn plugins and content – This may include, for example, 
+        content such as images, videos, or text, as well as buttons that allow users to share content from this 
+        online offering within LinkedIn; <strong>Service provider:</strong> LinkedIn Ireland Unlimited Company, Wilton 
+        Place, Dublin 2, Ireland; <span class=""><strong>Legal basis:</strong> Legitimate interests (Art. 6 para. 1 
+            sentence 1 lit. f GDPR); </span><strong>Website:</strong> <a href="https://www.linkedin.com" 
+            target="_blank">https://www.linkedin.com</a>; <strong>Privacy policy:</strong> <a 
+            href="https://www.linkedin.com/legal/privacy-policy" 
+            target="_blank">https://www.linkedin.com/legal/privacy-policy</a>;
+        <strong>Data processing agreement:</strong> <a href="https://legal.linkedin.com/dpa" 
+            target="_blank">https://legal.linkedin.com/dpa</a>; <strong>Basis for third-country transfers:</strong> Data 
+        Privacy Framework (DPF). <strong>Opt-out option:</strong> <a 
+            href="https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out" 
+            target="_blank">https://www.linkedin.com/psettings/guest-controls/retargeting-opt-out</a>.</li>
+</ul>
+<h2 id="m42">Definitions of Terms</h2>
+<p>In this section, you will find an overview of the terminology used in this privacy policy. Where terms are 
+    legally defined, their legal definitions apply. The following explanations are intended primarily to aid 
+    understanding.</p>
+<ul class="glossary">
+    <li><strong>Inventory data:</strong> Inventory data includes essential information required for identifying and 
+        managing contractual partners, user accounts, profiles, and similar assignments. This data may include 
+        personal and demographic details such as names, contact information (addresses, phone numbers, email 
+        addresses), birth dates, and specific identifiers (user IDs). Inventory data forms the basis for any formal 
+        interaction between individuals and services, institutions, or systems, allowing for unique identification 
+        and communication.</li>
+    <li><strong>Content data:</strong> Content data includes information generated in the course of creating, 
+        editing, and publishing all types of content. This category of data can include texts, images, videos, 
+        audio files, and other multimedia content published on various platforms and media. Content data is not 
+        limited to the actual content but also includes metadata providing information about the content itself, 
+        such as tags, descriptions, author details, and publication dates.</li>
+    <li><strong>Contact data:</strong> Contact data consists of essential information enabling communication with 
+        individuals or organizations. This includes phone numbers, postal addresses, and email addresses, as well as 
+        communication methods such as social media handles and instant messaging identifiers.</li>
+    <li><strong>Metadata, communication, and procedural data:</strong> Metadata, communication, and procedural 
+        data include information about how data is processed, transmitted, and managed. Metadata, also known as 
+        data about data, contains information describing the context, origin, and structure of other data. This 
+        can include file size, creation date, document author, and modification history. Communication data records 
+        the exchange of information between users across different channels, such as email correspondence, call logs, 
+        messages on social networks, and chat histories, including involved parties, timestamps, and transmission 
+        paths. Procedural data describes the processes and workflows within systems or organizations, including 
+        workflow documentation, transaction logs, and audit logs used for tracking and verifying operations.</li>
+    <li><strong>Usage data:</strong> Usage data refers to information that captures how users interact with digital 
+        products, services, or platforms. This data includes a wide range of details indicating how users utilize 
+        applications, which features they prefer, how long they stay on specific pages, and how they navigate through 
+        an application. Usage data can also include frequency of use, activity timestamps, IP addresses, device 
+        information, and location data. It is particularly valuable for analyzing user behavior, optimizing user 
+        experiences, personalizing content, and improving products or services. Additionally, usage data plays a 
+        crucial role in identifying trends, preferences, and potential issues within digital offerings.</li>
+    <li><strong>Personal data:</strong> "Personal data" refers to any information relating to an identified or 
+        identifiable natural person (hereinafter referred to as the "data subject"); an identifiable natural person 
+        is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a 
+        name, an identification number, location data, an online identifier (e.g., cookie), or one or more specific 
+        characteristics that express the physical, physiological, genetic, mental, economic, cultural, or social 
+        identity of that natural person.</li>
+    <li><strong>Profiles with user-related information:</strong> The processing of "profiles with user-related 
+        information," or simply "profiles," involves any type of automated processing of personal data that uses 
+        these personal data to analyze, evaluate, or predict certain personal aspects relating to a natural person 
+        (depending on the type of profiling, this may include various demographic, behavioral, and interest-related 
+        information, such as interactions with websites and their content, etc.). Profiling often involves the use 
+        of cookies and web beacons.</li>
+    <li><strong>Log data:</strong> Log data contains information about events or activities recorded in a system 
+        or network. This data typically includes details such as timestamps, IP addresses, user actions, error 
+        messages, and other information about the use or operation of a system. Log data is often used for analyzing 
+        system issues, monitoring security, or generating performance reports.</li>
+    <li><strong>Controller:</strong> The "controller" is the natural or legal person, public authority, agency, 
+        or other body that alone or jointly with others determines the purposes and means of processing personal 
+        data.</li>
+    <li><strong>Processing:</strong> "Processing" refers to any operation or set of operations performed on 
+        personal data, whether or not by automated means. The term is broad and covers practically any handling 
+        of data, including collection, evaluation, storage, transmission, or deletion.</li>
+</ul>
+<p class="seal"><a href="https://datenschutz-generator.de/"
+        title="Legal text by Dr. Schwenke - click for more information." target="_blank"
+        rel="noopener noreferrer nofollow">Created with the free privacy policy generator from Dr. Thomas Schwenke</a>
+</p>
+</section>
+`;
+
+    currentTemplate: string = this.enTemplate;
+
+    constructor(private translate: TranslateService, public translationService: TranslationService) { }
 
 
-  loadTemplateBasedOnLanguage() {
-    const currentLang = this.translationService.getCurrentLanguage();
-    if (currentLang === 'de') {
-      this.currentTemplate = this.deTemplate;
-    } else if (currentLang === 'en') {
-      this.currentTemplate = this.enTemplate;
+    ngOnInit(): void {
+        this.loadTemplateBasedOnLanguage();
+        this.translate.onLangChange.subscribe(() => {
+            this.loadTemplateBasedOnLanguage();
+        });
     }
-  }
 
 
-  changeLanguage(lang: string) {
-    this.translationService.setLanguage(lang);
-    this.loadTemplateBasedOnLanguage();
-  }
+    loadTemplateBasedOnLanguage() {
+        const currentLang = this.translationService.getCurrentLanguage();
+        if (currentLang === 'de') {
+            this.currentTemplate = this.deTemplate;
+        } else if (currentLang === 'en') {
+            this.currentTemplate = this.enTemplate;
+        }
+    }
+
+
+    changeLanguage(lang: string) {
+        this.translationService.setLanguage(lang);
+        this.loadTemplateBasedOnLanguage();
+    }
 }
-
