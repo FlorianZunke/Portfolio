@@ -8,14 +8,12 @@
                                 {{ 'drop-menu.link-1' | translate }}
                         </a>
                 </div>
-                <div>
+                <div class="drop-element padding">
                         <div class="border-hover"></div>
-                        <div>
-                                <a class="font-syne" [routerLink]="['/']" fragment="skills"
-                                        (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
-                        </div>
+                        <a class="font-syne" [routerLink]="['/']" fragment="skills"
+                                (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
                 </div>
-                <div>
+                <div class="drop-element padding">
                         <div class="border-hover"></div>
                         <a class="font-syne" [routerLink]="['/']" fragment="projects"
                                 (click)="navigateToSection('projects')">{{ 'drop-menu.link-3' | translate }}</a>
