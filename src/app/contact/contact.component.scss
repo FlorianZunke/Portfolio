@@ -239,6 +239,10 @@ input[type="checkbox"]:checked {
         width: 10px;
         height: 10px;
     }
+
+    h1 {
+        padding-bottom: 16px;
+    }
 }
 
 @media screen and (min-width: 280px) and (max-width: 540px) {
@@ -260,5 +264,9 @@ input[type="checkbox"]:checked {
         padding: 6px;
         width: 10px;
         height: 10px;
+    }
+
+    h1 {
+        padding-bottom: 16px;
     }
 }

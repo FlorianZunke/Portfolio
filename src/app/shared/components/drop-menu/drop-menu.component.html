@@ -1,36 +1,39 @@
 <div *ngIf="overlayService.overlayVisible$ | async" class="overlay">
         <app-header></app-header>
         <nav class="dropMenu">
-                <div class="drop-element">
+                <div class="drop-element padding">
                         <div class="border-hover"></div>
-                        <div >
-                                <a class="font-syne" [routerLink]="['/']" fragment="about_me" (click)="navigateToSection('about_me')">{{ 'drop-menu.link-1' | translate }}</a>
-                        </div>        
+                        <a class="font-syne" [routerLink]="['/']" fragment="about_me"
+                                (click)="navigateToSection('about_me')">
+                                {{ 'drop-menu.link-1' | translate }}
+                        </a>
                 </div>
                 <div>
                         <div class="border-hover"></div>
                         <div>
-                                <a class="font-syne" [routerLink]="['/']" fragment="skills" (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
+                                <a class="font-syne" [routerLink]="['/']" fragment="skills"
+                                        (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
                         </div>
                 </div>
                 <div>
                         <div class="border-hover"></div>
-                        <a class="font-syne" [routerLink]="['/']" fragment="projects" (click)="navigateToSection('projects')">{{ 'drop-menu.link-3' | translate }}</a>
+                        <a class="font-syne" [routerLink]="['/']" fragment="projects"
+                                (click)="navigateToSection('projects')">{{ 'drop-menu.link-3' | translate }}</a>
                 </div>
-
-                <footer class="padding">
-                        <div>
-                                <h1 class="font-syne">Say Hi!</h1>
-                                <span class="font-overpass"> &copy;Florian Zunke 2024</span>
-                        </div>
-                        <div>
-                                <a target="_blank" href="https://github.com/FlorianZunke"><img class="link_img"
-                                                src="assets/icons/GitHub-Default.png" alt=""></a>
-                                <a target="_blank" href=""><img class="link_img" src="assets/icons/Email-Default.png"
-                                                alt=""></a>
-                                <a target="_blank" href="https://www.linkedin.com/feed/"><img class="link_img"
-                                                src="assets/icons/LinkedIn-Default.png" alt=""></a>
-                        </div>
-                </footer>
         </nav>
+
+        <footer class="padding">
+                <div>
+                        <h1 class="font-syne">Say Hi!</h1>
+                        <span class="font-overpass"> &copy;Florian Zunke 2024</span>
+                </div>
+                <div>
+                        <a target="_blank" href="https://github.com/FlorianZunke"><img class="link_img"
+                                        src="assets/icons/GitHub-Default.png" alt=""></a>
+                        <a target="_blank" href=""><img class="link_img" src="assets/icons/Email-Default.png"
+                                        alt=""></a>
+                        <a target="_blank" href="https://www.linkedin.com/feed/"><img class="link_img"
+                                        src="assets/icons/LinkedIn-Default.png" alt=""></a>
+                </div>
+        </footer>
 </div>
