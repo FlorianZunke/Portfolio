@@ -1,9 +1,13 @@
-<app-header></app-header>
+<div class="privacy-container">
+    <app-header></app-header>
+    <section>
+        <div *ngIf="translationService.getCurrentLanguage() === 'de'">
+            <p [innerHTML]="deTemplate"></p>
+        </div>
 
-<div *ngIf="translationService.getCurrentLanguage() === 'de'">
-    <p [innerHTML]="deTemplate"></p>
-</div>
-
-<div *ngIf="translationService.getCurrentLanguage() === 'en'">
-    <p [innerHTML]="enTemplate"></p>
+        <div *ngIf="translationService.getCurrentLanguage() === 'en'">
+            <p [innerHTML]="enTemplate"></p>
+        </div>
+    </section>
+    <app-footer></app-footer>
 </div>

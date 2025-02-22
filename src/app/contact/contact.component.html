@@ -4,24 +4,28 @@
         <h2>{{ 'contact.head-1' | translate }}</h2>
         <p>{{ 'contact.head-2' | translate }}</p>
         <form #contactform="ngForm">
-            <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
-                [placeholder]="getNamePlaceholder(name)" required>
-            @if (!name.valid && name.touched && !name.disabled) {
-            <!-- <span class="font-overpass error-text">Please enter our name</span> -->
-            }
+            <div class="input-wrapper">
+                <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+                    [placeholder]="getNamePlaceholder(name)" required>
+                <img *ngIf="name.touched" [src]="name.valid ? 'assets/icons/valid.png' : 'assets/icons/error.png'" 
+                    class="status-icon" alt="Status Icon">
+            </div>
 
-            <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
-                [placeholder]="getEmailPlaceholder(email)" required
-                pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
-            @if (!email.valid && email.touched && !email.disabled) {
-            <!-- <span class="font-overpass error-text">Please enter our email</span> -->
-            }
+            <div class="input-wrapper">
+                <input #email="ngModel" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+                    [placeholder]="getEmailPlaceholder(email)" required
+                    pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}">
+                <img *ngIf="email.touched" [src]="email.valid ? 'assets/icons/valid.png' : 'assets/icons/error.png'"
+                    class="status-icon" alt="Status Icon">
+            </div>
+        
+            <div class="input-wrapper">
+                <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
+                    [placeholder]="getTextboxPlaceholder(message)" required></textarea>
+                <img *ngIf="message.touched" [src]="message.valid ? 'assets/icons/valid.png' : 'assets/icons/error.png'"
+                    class="status-icon" alt="Status Icon">
+            </div>
 
-            <textarea #message="ngModel" [(ngModel)]="contactData.message" id="message" name="message"
-                [placeholder]="getTextboxPlaceholder(message)" required></textarea>
-            @if (!message.valid && message.touched && !message.disabled) {
-            <!-- <span class="font-overpass error-text">Please enter a message</span> -->
-            }
             <div class="privacyPolice">
                 <input [(ngModel)]="contactData.privacy" class="checkbox" type="checkbox" name="privacy" id="checkbox">
                 <div>

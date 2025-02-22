@@ -1,10 +1,13 @@
 @import '../../../../assets/fonts/font.scss';
+@import '../../../../styles.scss';
 
-html,
-body {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1920px;
+    width: 100%;
 }
 
 .dropMenu {
@@ -12,8 +15,9 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    flex: 1;
     gap: 35px;
 
     >div {
@@ -168,8 +172,6 @@ footer {
         .border-hover {
             width: 20px;
             height: 20px;
-            bottom: 35px;
-            left: 20px;
             transition: all 0.3s ease-in-out;
         }
 
@@ -184,11 +186,11 @@ footer {
 @media screen and (min-width: 280px) and (max-width: 400px) {
 
     .dropMenu>div {
+        height: 59.25px;
+
         .border-hover {
             width: 20px;
             height: 20px;
-            bottom: 45px;
-            left: 30px;
             transition: all 0.3s ease-in-out;
         }
 
@@ -200,7 +202,7 @@ footer {
     }
 
     footer {
-        height: 325px;
+        height: 280px;
         flex-direction: column;
         justify-content: flex-end;
 

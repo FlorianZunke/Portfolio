@@ -2,9 +2,9 @@
         <a href="#"><img class="logo" src="assets/img/logo.png" alt="Logo"></a>
         <div>
                 <div class="translate-container">
-                        <span [ngClass]="{'active-lang': activeLanguage() === 'de'}" (click)="changeLanguage('de')">DE</span>
+                        <span class="font-overpass" [ngClass]="{'active-lang': activeLanguage() === 'de'}" (click)="changeLanguage('de')">DE</span>
                         <span>|</span>
-                        <span [ngClass]="{'active-lang': activeLanguage() === 'en'}" (click)="changeLanguage('en')">EN</span>
+                        <span class="font-overpass" [ngClass]="{'active-lang': activeLanguage() === 'en'}" (click)="changeLanguage('en')">EN</span>
                 </div>
                 <div class="trigger menu-icon" [ngClass]="{'open': overlayService.isOpen}" (click)="toggleOverlay()">
                         <span></span>

@@ -67,14 +67,14 @@ export class ContactComponent {
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
-            // Hier kann noch code hin
             ngForm.resetForm();
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => console.info('send post complete'),
+          complete: () => 
+            // Hier noch ein Overlay öffnen wo steht das die Nachricht angekommen ist
+            console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();

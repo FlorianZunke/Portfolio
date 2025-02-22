@@ -60,22 +60,22 @@ p {
     width: 100%;
     max-width: 1920px;
     padding-top: 75px;
+    padding-right: 25px;
     display: flex;
     justify-content: flex-end;
 
     >img {
-        transform: translateX(45px) translateY(-45px);
-    
+        transform: translateX(0) translateY(0);
+
         &.hovered {
-            transition: transform 0,25s ease-in-out;
-            transform: translateX(0) translateY(0);
+            transform: translateX(-35px) translateY(35px);
         }
     }
 }
 
 .hovered {
-    transition: transform 0,25s ease-in-out;
-    transform: translateX(0) translateY(0);
+    transition: transform 0, 25s ease-in-out;
+    transform: translateX(-35px) translateY(35px);
 }
 
 .single-card {
@@ -133,5 +133,9 @@ p {
         max-width: 260px;
         width: 100%;
         height: auto;
+    }
+
+    .arrow-position-container {
+        justify-content: center;
     }
 }

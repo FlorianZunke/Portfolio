@@ -100,18 +100,17 @@ a {
     padding-bottom: 75px;
 
     >img {
-        transform: translateX(-45px) translateY(-45px);
+        transform: translateX(0) translateY(0);
     
         &.hovered {
-            transition: transform 0,25s ease-in-out;
-            transform: translateX(0) translateY(0);
+            transform: translateX(35px) translateY(35px);
         }
     }
 }
 
 .hovered {
     transition: transform 0,25s ease-in-out;
-    transform: translateX(0) translateY(0);
+    transform: translateX(35px) translateY(35px);
 }
 
 
@@ -248,6 +247,9 @@ a {
     .skill-icon {
         max-height: 45px;
         max-width: 45px;
+    }
 
+    .arrow-position-container {
+        justify-content: center;
     }
 }

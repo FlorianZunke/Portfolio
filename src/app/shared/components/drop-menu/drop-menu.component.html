@@ -1,25 +1,25 @@
-<div *ngIf="overlayService.overlayVisible$ | async" class="overlay">
+<div *ngIf="overlayService.overlayVisible$ | async" class="menu-container">
         <app-header></app-header>
-        <nav class="dropMenu">
-                <div class="drop-element padding">
+        <main class="dropMenu">
+
+                <div class="drop-element">
                         <div class="border-hover"></div>
                         <a class="font-syne" [routerLink]="['/']" fragment="about_me"
                                 (click)="navigateToSection('about_me')">
                                 {{ 'drop-menu.link-1' | translate }}
                         </a>
                 </div>
-                <div class="drop-element padding">
+                <div class="drop-element">
                         <div class="border-hover"></div>
                         <a class="font-syne" [routerLink]="['/']" fragment="skills"
                                 (click)="navigateToSection('skills')">{{ 'drop-menu.link-2' | translate }}</a>
                 </div>
-                <div class="drop-element padding">
+                <div class="drop-element">
                         <div class="border-hover"></div>
                         <a class="font-syne" [routerLink]="['/']" fragment="projects"
                                 (click)="navigateToSection('projects')">{{ 'drop-menu.link-3' | translate }}</a>
                 </div>
-        </nav>
-
+        </main>
         <footer class="padding">
                 <div>
                         <h1 class="font-syne">Say Hi!</h1>
@@ -35,3 +35,5 @@
                 </div>
         </footer>
 </div>
+
+<!--                  -->

@@ -3,11 +3,12 @@ import { HeaderComponent } from "../shared/header/header.component";
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { TranslationService } from '../services/translation.service';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from "../shared/footer/footer.component";
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [CommonModule ,HeaderComponent, TranslateModule],
+  imports: [CommonModule, HeaderComponent, TranslateModule, FooterComponent],
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })
