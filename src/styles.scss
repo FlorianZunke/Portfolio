@@ -53,6 +53,29 @@ button {
     }
 }
 
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+    
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    
+    background: $colorCream;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    border-radius: 2px;
+    background: $colorBlack;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $colorGreen;
+  }
+
 //Tablet
 @media screen and (min-width: 450px) and (max-width: 1460px) {
 

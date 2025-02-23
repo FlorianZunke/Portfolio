@@ -3,8 +3,8 @@
 <section class="padding">
     <h1 class="font-syne">{{ 'contact.headline' | translate }}</h1>
     <div>
-        <h2>{{ 'contact.head-1' | translate }}</h2>
-        <p>{{ 'contact.head-2' | translate }}</p>
+        <h2 class="font-overpass">{{ 'contact.head-1' | translate }}</h2>
+        <p class="font-overpass">{{ 'contact.head-2' | translate }}</p>
         <form #contactform="ngForm">
             <div class="input-wrapper">
                 <input #name="ngModel" [(ngModel)]="contactData.name" type="text" id="name" name="name"
@@ -21,7 +21,7 @@
                     class="status-icon" alt="Status Icon">
             </div>
             @if (!email.valid && email.touched && !email.disabled) {
-                <span class="error-text">{{ "contact.error-text" | translate }} maxMustermann&#64;mail.com</span>
+                <span class="error-text font-overpass">{{ "contact.error-text" | translate }} maxMustermann&#64;mail.com</span>
             }
         
             <div class="input-wrapper">
