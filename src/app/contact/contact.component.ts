@@ -64,20 +64,19 @@ export class ContactComponent {
   };
 
   onSubmit(ngForm: NgForm) {
-    if (ngForm.submitted && ngForm.form.valid && !this.mailTest) {
+    if (ngForm.form.valid) { 
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-            ngForm.resetForm();
+            ngForm.resetForm(); // Reset form nach erfolgreichem Versand
           },
           error: (error) => {
             console.error(error);
           },
-          complete: () => 
-            this.overlayService.showSuccessMessage()
+          complete: () => {
+            this.overlayService.showSuccessMessage();
+          }
         });
-    } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-      ngForm.resetForm();
     }
   }
 
