@@ -39,6 +39,7 @@
             "message": "Was möchtest du wissen?",
             "messageError": "Bitte gib eine Nachricht ein!"
         },
+        "error-text": "Deine Mail sollte so aussehen:",
         "text-1": "Ich stimme der",
         "link": "Datenschutzerklärung",
         "text-2": "zu.",
@@ -73,5 +74,9 @@
         "join": "Ein Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
         "sharkie": "Ein einfaches Jump-and-Run-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.",
         "pokedex": "Basierend auf der PokeAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+    },
+    "user-feedback": {
+        "text-1": "Danke für deine E-Mail,",
+        "text-2": "ich werde mich spätestens in 1 Woche bei dir melden."
     }
 }

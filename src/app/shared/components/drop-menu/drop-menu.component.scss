@@ -155,7 +155,7 @@ footer {
     }
 }
 
-@media screen and (min-width: 400px) and (max-width: 768px) {
+@media screen and (min-width: 620px) and (max-width: 768px) {
     footer {
         height: 325px;
         flex-direction: column;
@@ -165,7 +165,6 @@ footer {
             justify-content: flex-end;
             padding-bottom: 32px;
         }
-
     }
 
     .dropMenu>div {
@@ -183,14 +182,46 @@ footer {
     }
 }
 
+@media screen and (min-width: 400px) and (max-width: 620px) {
+    footer {
+        height: 325px;
+        flex-direction: column;
+        justify-content: flex-end;
+
+        >div:nth-child(2) {
+            justify-content: flex-end;
+            padding-bottom: 32px;
+        }
+    }
+
+    .dropMenu>div {
+        height: 100.25px;
+
+        .border-hover {
+            width: 20px;
+            height: 20px;
+            left: 40px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover .border-hover {
+            height: 0;
+            left: 300px;
+            width: 200px;
+        }
+    }
+}
+
 @media screen and (min-width: 280px) and (max-width: 400px) {
 
     .dropMenu>div {
         height: 59.25px;
 
+
         .border-hover {
             width: 20px;
             height: 20px;
+            left: 40px;
             transition: all 0.3s ease-in-out;
         }
 

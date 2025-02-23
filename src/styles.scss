@@ -24,12 +24,12 @@
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: auto;
+    // padding: 0 50px;
+    max-width: 1920px;
+    width: 100%;
     background-color: $colorCream;
+    box-sizing: border-box;
 }
 
 .padding {
@@ -54,7 +54,7 @@ button {
 }
 
 //Tablet
-@media screen and (min-width: 450px) and (max-width: 1285px) {
+@media screen and (min-width: 450px) and (max-width: 1460px) {
 
     .padding {
         padding-left: 40px;
@@ -71,8 +71,8 @@ button {
 //Smartphone
 @media screen and (min-width: 280px) and (max-width: 500px) {
     .padding {
-        padding-left: 16px;
-        padding-right: 16px;
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
     button {

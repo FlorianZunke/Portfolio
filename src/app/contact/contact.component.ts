@@ -4,6 +4,7 @@ import { FooterComponent } from "../shared/footer/footer.component";
 import { HttpClient } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { OverlayService } from '../services/overlay.service';
 
 @Component({
   selector: 'app-contact',
@@ -23,7 +24,7 @@ export class ContactComponent {
     messageError: this.translate.instant('contact.placeholder.messageError'),
   });
 
-  constructor(private translate: TranslateService) {
+  constructor(private translate: TranslateService, private overlayService: OverlayService) {
     this.translate.onLangChange.subscribe(() => {
       this.updatePlaceholders();
     });
@@ -73,8 +74,7 @@ export class ContactComponent {
             console.error(error);
           },
           complete: () => 
-            // Hier noch ein Overlay öffnen wo steht das die Nachricht angekommen ist
-            console.info('send post complete'),
+            this.overlayService.showSuccessMessage()
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
       ngForm.resetForm();

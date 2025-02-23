@@ -1,3 +1,10 @@
+
+
+<div *ngIf="success$ | async" class="valid-user-message">
+  <p>{{ 'user-feedback.text-1' | translate }} <br> {{ 'user-feedback.text-2' | translate }}</p>
+</div>
+
+
 <section>
   <app-header></app-header>
   <app-landingpage id="landingpage"></app-landingpage>
