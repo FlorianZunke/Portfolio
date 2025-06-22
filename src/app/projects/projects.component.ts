@@ -14,6 +14,14 @@ export class ProjectsComponent {
 
   projects = signal([
     {
+      projectName: 'DaBubble',
+      descriptionKey: 'projects.da-bubble',
+      description: '',
+      skills: 'Typescript | Angular | HTML | SCSS',
+      imgSrc: 'assets/img/da-bubble.jpg',
+      link: '//dabubble.florian-zunke.de/',
+    },
+    {
       projectName: 'Join',
       descriptionKey: 'projects.join',
       description: '',

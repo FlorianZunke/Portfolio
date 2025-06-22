@@ -73,7 +73,8 @@
     "projects": {
         "join": "Ein Task-Manager, inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop-Funktionen, weise Benutzer und Kategorien zu.",
         "sharkie": "Ein einfaches Jump-and-Run-Spiel, basierend auf einem objektorientierten Ansatz. Hilf Sharkie, Münzen und Giftflaschen zu sammeln, um gegen den Killerwal zu kämpfen.",
-        "pokedex": "Basierend auf der PokeAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert."
+        "pokedex": "Basierend auf der PokeAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+        "da-bubble": "Diese App ist ein Slack-Klon. Sie revolutioniert die Teamkommunikation und -zusammenarbeit mit ihrer intuitiven Benutzeroberfläche, Echtzeit-Messaging und robusten Kanalorganisation."
     },
     "user-feedback": {
         "text-1": "Danke für deine E-Mail,",
